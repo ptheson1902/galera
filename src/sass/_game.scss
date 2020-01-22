@@ -1,0 +1,396 @@
+@keyframes character_in{
+    0%{
+        opacity: 0;
+        transform: translateX(-1.5rem) scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem) scale(1);
+    }
+}
+
+@keyframes user_in{
+    0%{
+        opacity: 0;
+        transform: translate(-7.5rem,-1rem) scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-5rem,-1rem) scale(1);
+    }   
+}
+
+@keyframes fade_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }   
+}
+
+@keyframes game_point{
+    0%{
+        opacity: 0;
+        transform: translateY(0rem) scale(0.5);
+    }
+    30%{
+        opacity: 1;
+        transform: translateY(5rem);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+    90%{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100%{
+        opacity: 0;
+    }  
+}
+
+//ゲーム
+.game{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &__start{
+        padding: 8rem 5%;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        animation: window_open 0.6s ease-in-out forwards;
+        &__ttl{
+            margin: 4rem auto;
+            width: 24rem;
+            height: 24rem;
+            font-size: 4.6rem;
+            line-height: 24rem;
+            background: url(../img/back-gameTtl.svg);
+            background-size: 100% 100%;
+        }//.ttl
+        &__logo{
+            img{
+                margin: 2rem 0;
+                width: 16rem;
+                height: auto;
+            }
+        }//.logo
+        &__btn{
+            margin: 1rem 6rem;
+            background-color: #9CCECE;
+            color: white;
+            text-align: center;
+            font-size: 2.4rem;
+            border-radius: 1.5rem;
+            line-height: 4.5rem;
+            box-shadow: 2px 3px 0 2px #5D8686;
+            cursor: pointer;
+        }//.btn
+    }//.start
+    &__main{
+        width: 100%;
+        height: 100%;
+        .point_on{
+            animation: game_point 1.2s ease-in-out forwards;
+        }//.point_on
+        //点数
+        .pointCorrect{
+            color: #F45589;
+            text-shadow: -2px -2px 0 #fff;
+        }//.pointCorrect
+        .pointIncorrect{
+            color: #555;
+            text-shadow: -2px -2px 0 #fff;
+        }//.pointIncorrect
+        &__point{
+            position: absolute;
+            z-index: 100;
+            margin: 60% 0 0;
+            width: 100%;
+            text-align: center;
+            font-size: 10rem;
+        }//.point
+        &__historyBtn{
+            position: absolute;
+            top: 2rem;
+            left: 1.5rem;
+            z-index: 10;
+            text-align: center;
+        }//.historyBtn
+        .meetingroomBack{
+            background: url(../img/back-meetingroom.svg) no-repeat;
+            background-size: 100% auto;
+        }
+        .classroomBack{
+            background: url(../img/back-classroom.svg) no-repeat;
+            background-size: 100% auto;
+        }
+        .workingroomBack{
+            background: url(../img/back-workingroom.svg) no-repeat;
+            background-size: 100% auto;
+        }
+        &__top{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 5%;
+            width: 100%;
+            height: 70%;
+            .user{
+                transform-origin: center bottom;
+                p{
+                    top: -1.5rem;
+                    right: -13.5rem;
+                    transform: scale(1.1);
+                    @include dresson();
+                }
+                animation: user_in 0.6s ease-in-out forwards;
+            }//.user
+            .character{
+                animation: character_in 0.6s ease-in-out forwards;
+            }
+        }//.top
+        &__bottom{
+            position: relative;
+            padding: 5%;
+            width: 100%;
+            height: 30%;
+            background: #7DC1C1;
+            text-align: center;
+            .transparent{
+                background: transparent;
+            }
+            &__text{
+                position: absolute;
+                top: -5rem;
+                z-index: 20;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: auto;
+                background: #fff;
+                font-size: 1.6rem;
+                text-align: center;
+                .question{
+                    padding: 5%;
+                    height: 8rem;
+                    animation: fade_in 0.8s forwards;
+                }//.question
+                .option{
+                    position: relative;
+                    margin: 0 0.5rem;
+                    width: 50%;
+                    height: auto;
+                    background: #fff;
+                    border-radius: 0.5rem;
+                    font-size: 1.4rem;
+                    box-shadow: 3px 3px 0 3px rgba(0,0,0,0.5);
+                    animation: fade_in 0.8s forwards;
+                    cursor: pointer;
+                    .choose{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #F8ED89;
+                        opacity: 0.6;
+                    }//.choose
+                    b{
+                        display: block;
+                        padding: 0.5rem 0;
+                        width: 100%;
+                        background: #F1B54F;
+                        border-radius: 0.5rem 0.5rem 0 0;
+                        font-size: 1.6rem;
+                        color: #fff;
+                        font-weight: normal;
+                        text-align: center;
+                    }
+                    span{
+                        display: table-cell;
+                        padding: 1rem;
+                        height: 10rem;
+                        padding: 1rem;
+                        vertical-align: middle;
+                        pointer-events: none;
+                    }
+                }//.option
+            }//.text
+            &__microBtn{
+                margin: 10rem auto 0;
+                width: 14.6rem;
+                height: 3.6rem;
+                background: #F8ED89;
+                border-radius: 0.5rem;
+                box-shadow: 2px 2px 0 2px #E2CA00;
+                animation: fade_in 0.4s forwards;
+            }//.micro
+        }//.bottom
+    }//.main
+    &__history{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        animation: window_open 0.6s ease-in-out forwards;
+        &__back{
+            margin: 2rem;
+            width: 5rem;
+            height: 5rem;
+            background: rgba(0,0,0,0.9);
+            border: 2px solid #fff;
+            border-radius: 50%;
+            text-align: center;
+        }//.historyBtn
+        &__textArea{
+            width: 100%;
+            height: 80%;
+            overflow: scroll;
+            &__text{
+                position: relative;
+                margin: 4rem 2rem;
+                padding: 0.5rem 1rem;
+                width: 60%;
+                height: auto;
+                border: 1px solid #fff;
+                border-radius: 0.5rem;
+                color: #fff;
+                .people{
+                    position: absolute;
+                    top: -2.4rem;
+                }
+                &:nth-of-type(2n){
+                    margin-left: 35%;
+                    .people{
+                        left: 0rem;
+                    }
+                }
+                &:nth-of-type(2n-1){
+                    margin-right: 35%;
+                    .people{
+                        right: 0rem;
+                    }
+                }
+            }//.text
+        }
+    }//.history
+    &__result{
+        margin: 12% 5%;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: #7DC1C1;
+        }
+        &__resultArea{
+            padding: 20% 0;
+            height: 90%;
+            text-align: center;
+            border-radius: 2rem;
+            background: #D7EAEA;
+            animation: window_open 0.6s ease-in-out forwards;
+            &__ttl{
+                font-size: 2.4rem;
+                text-align: center;
+            }//.ttl
+            &__get{
+                display: inline-block;
+                margin-top: 3rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px dotted #707070;
+                .point{
+                    margin: 0 0.5rem;
+                    font-size: 3rem;
+                }//.point
+            }//.get
+            &__graph{
+                position: relative;
+                margin: 0 auto;
+                width: 30rem;
+                height: 30rem;
+                transform: scale(0.9);
+                .cirBack{
+                    display: block;
+                    position: absolute;
+                    z-index: 5;
+                    margin: 5rem;
+                    width: 20rem;
+                    height: 20rem;
+                    background: #F8B62D;
+                    border-radius: 50%;
+                }//.cirBack
+                svg{
+                    position: absolute;
+                    z-index: 10;
+                    top: 0;
+                    left: 0;
+                    width: 30rem;
+                    height: 30rem;
+                    transform: rotate(90deg);
+                    circle{
+                        stroke-dasharray: 100,0;
+                        animation: cir_ani 1.2s ease-in-out forwards;
+                    }//.circle
+                }//svg
+                .cirSmall{
+                    position: absolute;
+                    z-index: 15;
+                    margin: 7rem;
+                    width: 16rem;
+                    height: 16rem;
+                    background: #D7EAEA;
+                    border-radius: 50%;
+                }//.cirSmall
+                //得点
+                .point{
+                    display: flex;
+                    position: absolute;
+                    z-index: 15;
+                    margin: 12rem 9rem;
+                    width: 12rem;
+                    height: 6rem;
+                    font-size: 4rem;
+                    font-weight: 100;
+                    vertical-align: top;
+                    .getPoint{
+                        margin-top: -0.5rem;
+                        font-size: 2.4rem;
+                        font-weight: normal;
+                    }//.getPoint
+                    p{
+                        margin-top: 3rem;
+                        width: 50%;
+                        text-align: center;
+                        font-size: 1.6rem;
+                        font-weight: normal;
+                    }//p
+                }//.point
+            }//.graph
+            .switchA{
+                color: #FF6767;
+            }
+            .switchB{
+                color: #5C7CFF;
+            }
+            &__btn{
+                width: 15rem;
+                @include main_btn();
+                color: #fff;
+                background: #7195C5;
+                box-shadow: 2px 3px 0 2px #426FAC;
+                cursor: pointer;
+            }//.btn
+        }//.resultArea
+    }//.result
+}

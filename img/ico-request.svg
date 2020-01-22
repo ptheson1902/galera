@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104.104" height="104.339" viewBox="0 0 104.104 104.339">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="104.104" height="104.339" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_75" data-name="グループ 75" transform="translate(-216.896 -609.661)">
+    <g id="グループ_74" data-name="グループ 74">
+      <g id="リピートグリッド_2" data-name="リピートグリッド 2" transform="translate(216.896 609.661)" clip-path="url(#clip-path)">
+        <g transform="translate(-216.896 -609.661)">
+          <rect id="長方形_61" data-name="長方形 61" width="100" height="100" rx="12" transform="translate(221 614)" fill="#4d935d" opacity="0.799"/>
+          <rect id="長方形_32" data-name="長方形 32" width="100" height="100" rx="12" transform="translate(217.396 610.161)" fill="#fff" stroke="#c9c9c9" stroke-miterlimit="10" stroke-width="1"/>
+          <g id="グループ_44" data-name="グループ 44" transform="translate(241.449 622.592)">
+            <path id="パス_128" data-name="パス 128" d="M14.787,11.69s-.378.189-1.026.54C11.061,13.8,3.96,18.791,3.96,28l19.629,6.318" transform="translate(6.306 19.873)" fill="#575d7c"/>
+            <circle id="楕円形_3" data-name="楕円形 3" cx="16.605" cy="16.605" r="16.605" transform="translate(12.237 0)" fill="#b5b5b5"/>
+            <path id="パス_129" data-name="パス 129" d="M11.2,11.71,6.02,16.84l4.671,3.1L8.018,22.834l8.721,2.835Z" transform="translate(9.808 19.907)" fill="#3a446d"/>
+            <path id="パス_130" data-name="パス 130" d="M11.2,11.71,6.02,16.84l4.671,3.1L8.018,22.834l8.721,2.835Z" transform="translate(9.808 19.907)" fill="#3a446d"/>
+            <path id="パス_131" data-name="パス 131" d="M19.4,11.69s.351.189.945.54C22.833,13.8,29.421,18.791,29.421,28L11.25,34.316" transform="translate(18.699 19.873)" fill="#575d7c"/>
+            <path id="パス_132" data-name="パス 132" d="M17.53,11.71l4.806,5.13-4.32,3.1,2.457,2.889L12.4,25.669Z" transform="translate(20.654 19.907)" fill="#3a446d"/>
+            <circle id="楕円形_4" data-name="楕円形 4" cx="5.319" cy="5.319" r="5.319" transform="translate(9.024 46.278)" fill="#b5b5b5"/>
+            <circle id="楕円形_5" data-name="楕円形 5" cx="5.319" cy="5.319" r="5.319" transform="translate(38.913 46.278)" fill="#b5b5b5"/>
+            <path id="パス_133" data-name="パス 133" d="M7.48,11.48" transform="translate(12.29 19.516)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="0.75"/>
+            <path id="パス_134" data-name="パス 134" d="M10,12.485l6.156-.135-1.377,3.807-3.294-.135Z" transform="translate(16.574 20.995)" fill="#f2b2a2"/>
+            <path id="パス_135" data-name="パス 135" d="M10.64,23.8,11.4,14H13.2l.621,9.693" transform="translate(17.662 23.8)" fill="#f2b2a2"/>
+            <g id="グループ_42" data-name="グループ 42" transform="translate(9.456 50.976)">
+              <path id="パス_136" data-name="パス 136" d="M9.114,19.177l27.486-.3,6.048,22.95L3.66,42.424Z" transform="translate(-3.66 -18.88)" fill="#fff" stroke="#626363" stroke-miterlimit="10" stroke-width="0.5"/>
+              <line id="線_21" data-name="線 21" x2="13.932" transform="translate(12.528 5.103)" fill="#fff" stroke="#626363" stroke-miterlimit="10" stroke-width="0.5"/>
+              <line id="線_22" data-name="線 22" x2="16.551" transform="translate(11.205 10.098)" fill="#fff" stroke="#626363" stroke-miterlimit="10" stroke-width="0.5"/>
+              <line id="線_23" data-name="線 23" x2="19.845" transform="translate(9.558 14.85)" fill="#fff" stroke="#626363" stroke-miterlimit="10" stroke-width="0.5"/>
+            </g>
+            <g id="グループ_43" data-name="グループ 43" transform="translate(0.25 22.41)">
+              <path id="パス_137" data-name="パス 137" d="M1.887,8.3S.24,13.43,3.831,16.8" transform="translate(1.892 -8.3)" fill="#fff" stroke="#626363" stroke-miterlimit="10" stroke-width="0.5"/>
+              <path id="パス_138" data-name="パス 138" d="M.627,8.95s-1.647,5.13,1.944,8.5" transform="translate(-0.25 -7.195)" fill="#fff" stroke="#626363" stroke-miterlimit="10" stroke-width="0.5"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

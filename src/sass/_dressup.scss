@@ -1,0 +1,123 @@
+@keyframes dress_ani{
+    0%{
+        transform: translateX(-1rem);
+    }
+    50%{
+        transform: translateX(1rem);
+    }
+    100%{
+        transform: translateX(-1rem);
+    }
+}
+
+//着せ替え
+.dressup{
+    &__avatar{
+        display: flex;
+        padding: 12rem 5% 0;
+        &__choose{
+            width: 17%;
+            text-align: center;
+            list-style-type: none;
+            .itemName{
+                padding: 0.5rem 0;
+                font-size: 1rem;
+            }//.itemName
+            .parts{
+                border: 1px solid #707070;
+                padding: 0.5rem;
+                width: 100%;
+                height: 5rem;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                }//img
+            }//.parts
+        }//.choose
+        &__dresson{
+            @include dresson();
+        }//.dresson
+    }//avatar
+    &__control{
+        margin: 1rem 0;
+        padding: 1rem 5%;
+        width: 100%;
+        height: 30%;
+        overflow: scroll;
+        &__list{
+            margin-bottom: 1.5rem;
+            width: 100%;
+            list-style-type: none;
+            text-align: center;
+            border-collapse: collapse;
+            tr{
+                .nopointer{
+                    pointer-events: none;
+                    p{
+                        color: #fff;
+                    }
+                }//.nopointer
+                td{
+                    cursor: pointer;
+                    position: relative;
+                    padding: 0.8rem 0 2rem;
+                    width: 20%;
+                    height: 5rem;
+                    border: 1px solid #707070;
+                    .key{
+                        position: absolute;
+                        z-index: 50;
+                        top: 0;
+                        left: 0;
+                        background: rgba(0,0,0,0.3);
+                        width: 100%;
+                        height: 100%;
+                        img{
+                            margin-top: 2rem;
+                            width: 2rem;
+                        }
+                    }//.key
+                    .accessory,.head,.body{
+                        width: 4rem;
+                        height: 4rem;
+                        pointer-events: none;
+                    }//img
+                    p{
+                        position: absolute;
+                        bottom: 0;
+                        padding-bottom: 0.5rem;
+                        width: 100%;
+                        text-align: center;
+                        z-index: 60;
+                        font-size: 1.2rem;
+                        pointer-events: none;
+                    }//p
+                }//td
+            }//tr
+        }//.choose,.list
+        &__choose{
+            td{
+                height: 6rem;
+                &:nth-of-type(1){
+                    background: #B3D2AB;
+                }
+            }//td
+        }//choose
+    }//.control
+    &__btn{
+        margin-bottom: 2rem;
+        text-align: center;
+        @include check_btn();
+    }//.btn
+    &__check{
+        text-align: center;
+        &__word{
+            margin: 3rem 0;
+            font-size: 1.6rem;
+        }//.word
+        @include check_btn();
+    }//.check
+    
+}//.dressup

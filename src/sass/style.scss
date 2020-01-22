@@ -1,0 +1,311 @@
+@import "ress";
+@import "vars";
+@import "common";
+@import "mixin";
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #707070;
+    font-size: 1.5rem;
+    overflow: hidden;
+    //font-family: "筑紫B丸ゴシック",serif;
+}//body
+
+//見えないクラス
+.flex{
+    display: flex;
+}
+.hidden{
+    display: none;
+}
+.nosee{
+    visibility: hidden;
+}
+
+//ロードアニメション
+@keyframes load_ani{
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+//背景・単語を降らす
+@keyframes wordAni{
+    0%{
+        top: -15vh;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        top: 110vh;
+        opacity: 0;
+    }
+}
+
+//画面を開くアニメーション
+@keyframes window_open{
+    0%{
+        transform: translateX(-1rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+//ローディングアニメーション
+@keyframes up_ani{
+    0%{
+        transform: translateY(0rem);
+    }
+    100%{
+        transform: translateY(3rem);
+    }
+}
+
+//ログイン入る
+@keyframes login_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+//ローディグ入る
+@keyframes loading_in{
+    0%{
+        opacity: 0;
+    }
+    20%{ 
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1);
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+//ローディング画面
+.loading{
+    padding: 0 10% 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: loading_in 3.6s ease-in-out 0.3s;
+    overflow: hidden;
+    p{
+        img{
+            width: 100%;
+            height: 100%;
+        }//img
+        &:nth-of-type(1){
+            width: 3rem;
+            animation: up_ani 1s ease-in-out 0.2s infinite alternate;
+        }//nth-of-type(1)
+        &:nth-of-type(2){
+            width: 3rem;
+            animation: up_ani 1s ease-in-out 0.4s infinite alternate;
+        }//nth-of-type(2)
+        &:nth-of-type(3){
+            width: 0.6rem;
+            height: 7rem;
+            animation: up_ani 1s ease-in-out 0.6s infinite alternate;
+        }//nth-of-type(3)
+        &:nth-of-type(4){
+            width: 3rem;
+            animation: up_ani 1s ease-in-out 0.8s infinite alternate;
+        }//nth-of-type(4)
+        &:nth-of-type(5){
+            width: 3rem;
+            animation: up_ani 1s ease-in-out 1s infinite alternate;
+        }//nth-of-type(5)
+    }//p
+}//.loading
+
+//フッターメニュー
+.menu{
+    position: fixed;
+    z-index: 60;
+    bottom: 0;
+    width: 100%;
+    background: #8FBFBF;
+    color: #fff;
+    font-size: 1.2rem;
+    &__list{
+        display: flex;
+        list-style-type: none;
+        text-align: center;
+        &__item{
+            padding: 0.5rem 0 1rem;
+            width: 20%;
+            transition: 0.4s ease-in-out;
+            cursor: pointer;
+            &.visited .name{
+                color: #5A6BB2;
+            }
+            &.visited .icon svg path{
+                transition: 0.4s ease-in-out;
+                fill: #5A6BB2;
+            }
+            .icon{
+                padding: 0.5rem 0;
+                height: 4.5rem;
+                pointer-events: none;
+            }//.icon
+            .name{
+                transition: 0.4s ease-in-out;
+                pointer-events: none;
+            }//.name
+        }//.item
+    }//.list
+}//.menu
+
+
+@keyframes new_list{
+    0%{
+        opacity: 0;
+        transform: translateY(11rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(13rem);
+    }
+}
+
+//シミュレーション
+.signCompany,.signUser,.simulation,.game,.word,.matching,.mypage,.mypageCompany,.dressup,.matching{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    background: #fff;
+    color: #626262;
+    //タイトルエリア
+    &__title{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 10rem;
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: 10rem;
+        text-align: center;
+        background: #B8E0E0;
+        border-radius: 0 0 50% 50%/0 0 30% 30%;
+    }//.title
+    //前の画面に戻る
+    .back{
+        position: absolute;
+        top: 6rem;
+        left: 3rem;
+        z-index: 120;
+        img{
+            width: 5rem;
+            cursor: pointer;
+        }//img
+    }//.back
+    //新しいメッセージ
+    .newMess{
+        position: absolute;
+        top: 6rem;
+        right: 3rem;
+        z-index: 120;
+        cursor: pointer;
+        img{
+            width: 5rem;
+            pointer-events: none;
+        }//img
+        span{
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            z-index: 30;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #FF5F5F;
+            border-radius: 50%;
+            pointer-events: none;
+        }//span
+    }//.newMess
+    //loading
+    .load{
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        animation: load_ani 4s ease-in-out infinite;
+        img{
+            margin: 16rem auto;
+            width: 8rem;
+        }//img
+    }//.load
+}
+
+//新しいメッセージ
+.newList{
+    position: absolute;
+    top: -4rem;
+    right: 2rem;
+    z-index: 110;
+    padding: 0.5rem 1.5rem;
+    width: 20rem;
+    height: auto;
+    background:#5D8686;
+    border-radius: 0.5rem;
+    color: #fff;
+    list-style-type: none;
+    animation: new_list 0.6s ease-in-out forwards;
+    li:not(:last-child){
+        border-bottom: 1px solid #fff;
+    }
+    li{
+        time{
+            display: block;
+            font-size: 1.2rem;
+        }
+        padding: 0.8rem 0;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }//li
+}//.newList
+
+@import "_login";
+@import "_sigin";
+@import "_matching";
+@import "_simulation";
+@import "_mypage";
+@import "_dressup";
+@import "_word";
+@import "_game";
+
+/* ~ 479px ポートレートモード（スマートフォンの縦向き表示） */
+@media screen and (max-width:479px){
+    
+}

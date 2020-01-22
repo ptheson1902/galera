@@ -1,0 +1,391 @@
+//ユーザー登録
+.signUser,.signCompany{
+    //個人登録
+    padding-top: 12rem;
+    height: 100%;
+    &__item{
+        margin: 0 5%;
+        padding: 0.8rem 10%;
+        transition: 0.3s ease-in-out;
+        &:focus-within{
+            background: #D3E0E0;
+        }
+        &__name{
+            font-size: 1.5rem;
+            line-height: 3rem;
+            span{
+                padding-left: 1.5rem;
+                color:#5A6BB2;
+                font-size: 1.2rem;
+            }//span
+        }//.name
+        &__mess{
+            input{
+                padding: 0.5rem;
+                width: 100%;
+                border-bottom: 1px solid #707070;
+            }//input
+        }//.mess
+        &__option{
+            position: relative;
+            width: 70%;
+            &::after{
+                position: absolute;
+                top: 1.5rem;
+                right: 0;
+                content: "";
+                border-top: 1rem solid #707070;
+                border-left: 1rem solid transparent;
+                border-right: 1rem solid transparent;
+            }//::after
+        }//.option
+        select{
+            position: relative;
+            z-index: 10;
+            padding: 0.5em;
+            width: 100%;
+            border-bottom: 1px solid #707070;
+        }//select
+
+        //会社登録
+        &__pointArea{
+            display: inline-block;
+            width: 12rem;
+            border-bottom: 1px solid #707070;
+            input{
+                padding: 0.5rem;
+                width: 10rem;
+            }//input
+        }
+        &__referenceBook{
+            margin-left: 1rem;
+            padding: 0.5rem 1rem;
+            background: #fff;
+            border-radius: 1rem;
+            border: 1px solid #707070;
+            font-size: 1.2rem;
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+        }//.referenceBook
+        &__commend{
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }//commedn
+        &__messArea{
+            margin: 0.5rem 0;
+            padding: 1rem;
+            width: 100%;
+            height: 6rem;
+            background: #fff;
+            border: 1px solid #707070;
+            border-radius: 1rem;
+            textarea{
+                width: 100%;
+                height: 100%;
+            }//textarea
+        }//.messArea
+        &__image{
+            label{
+                position: relative;
+                display: block;
+                margin: 0.5rem 0;
+                width: 24rem;
+                height: 12rem;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    width : 100%;
+                    height: 100%;
+                    border: none;
+                    object-fit: cover;
+                }//img
+                button{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 4rem 10rem;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 4rem;
+                    background: #707070;
+                    color: #fff;
+                    pointer-events: none;
+                }//button
+            }//label
+            input{
+                display: none;
+            }//input
+        }//.image
+    }//.item
+    .companyDesc{
+        .signCompany__item__messArea{
+            height: 12rem;
+        }
+    }//.companyDesc
+    &__nextBtn,&__sendBtn{
+        margin: 1.5rem 15%;
+        width: 70%;
+        color: #fff;
+        @include main_btn();
+        background: #7195C5;
+        box-shadow: 2px 3px 0 2px #426FAC;
+    }//.entryBtn
+    &__waittime{
+        margin: 1.5rem 15%;
+        width: 70%;
+        color: #707070;
+        @include main_btn();
+        background: #E8E8E8;
+        box-shadow: 2px 3px 0 2px #B2B2B2;
+        line-height: 3.5rem;
+    }//.entryBtn
+}//.signUser
+
+.loginSuccess,.loginFailure{
+    animation: window_open 0.6s ease-in-out forwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    margin: 15rem 5% 0;
+    padding: 2rem 5%;
+    width: 90%;
+    height: auto;
+    border-radius: 1.5rem;
+    background: #F7F7F7;
+    &__enTtl,&__jaTtl{
+        text-align: center;
+        line-height: 3.6rem;
+    }//.enTtl,.jaTtl
+    &__enTtl{
+        font-size: 2.4rem;
+        font-weight: bold;
+    }//.enTtl
+    &__jaTtl{
+        font-size: 1.6rem;
+    }//.jaTtl
+    &__content,&__reference{
+        margin: 1rem 0;
+        line-height: 2.4rem;
+    }//.content
+    &__btn{
+        margin: 1.5rem 15%;
+        width: 70%;
+        @include main_btn();
+    }//.btn
+}
+
+.loginSuccess{
+    &__enTtl{
+        color: #5D8686;
+    }//.enTtk
+    &__jaTtl{
+        span{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }//.jaTtl
+    &__content,&__reference{
+        span{
+            color: #5D8686;
+            font-size: 3rem;
+            font-weight: bold;
+        }//span
+    }//.content
+    &__btn{
+        background: #9BC674;
+        box-shadow: 2px 3px 0 2px #5D8686;
+        color: #fff;
+        @include main_btn();
+        font-size: 3rem;
+        font-weight: bold;
+    }//.btn
+}//.loginSuccess
+
+.loginFailure{
+    &__btn{
+        @include main_btn();
+        background-color: #707070;
+        box-shadow: 2px 3px 0 2px #555;
+        color: #fff;
+    }//.btn
+}//.loginFailure
+
+.authent,.notmatch,.referenceBook{
+    animation: window_open 0.6s ease-in-out forwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 11rem 5% 0;
+    padding: 4rem 5%;
+    width: 90%;
+    height: 54rem;
+    border-radius: 1.5rem;
+    background: #F7F7F7;
+    &__ttl{
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        line-height: 3.6rem;
+    }//.ttl
+    &__text{
+        margin: 3rem 0 1rem;
+    }//.text
+    &__entryBtn{
+        margin: 1.5rem 15%;
+        width: 70%;
+        @include main_btn();
+        background: #9CCECE;
+        box-shadow: 3px 2px 0 2px #5D8686;
+        color: #fff;
+    }//.entryBtn
+    &__num{
+        input{
+            padding: 0.5rem 1rem;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            border-bottom: 1px solid #707070;
+        }
+    }//.num
+    &__notice{
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+    }//.notice
+    &__closeBtn{
+        margin: 1.5rem 35%;
+        width: 30%;
+        color: #fff;
+        @include main_btn();
+        background-color: #707070;
+        box-shadow: 2px 2px 0 2px #555;
+    }//.closeBtn
+
+    //使い方
+    &__content{
+        width: 100%;
+        height: 32rem;
+    }//.content
+
+    //使い方
+    &__point{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }//.point
+}//.authentなど
+
+//説明の切り替え
+@keyframes img_switch_off{
+    0%{
+        transform: translateX(0%) ;
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100%) ;
+        opacity: 0;
+    }
+}
+
+@keyframes img_switch_on{
+    0%{
+        transform: translateX(100%) ;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) ;
+        opacity: 1;
+    }
+}
+
+.howtouse{
+    animation: window_open 0.6s ease-in-out forwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    width: 100%;
+    height: 100%;
+    background: #fefefe;
+    .img_switch_off{
+        animation: img_switch_off 0.6s ease-in-out forwards;
+    }//.img_switch_off
+    .img_switch_on{
+        animation: img_switch_on 0.6s ease-in-out forwards;
+    }//.img_switch_on
+    &__content{
+        width: 100%;
+        height: 80%;
+        &__slide{
+            position: relative;
+            width: 100%;
+            height: 90%;
+            list-style: none;
+            overflow: hidden;
+            li{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                &:nth-of-type(2),&:nth-of-type(3){
+                    opacity: 0;
+                }//初期化
+                img{
+                    width: 100%;
+                    height: 90%;
+                }//img
+            }//li
+            .sttl{
+                margin: 3rem 0 5rem;
+                color: #5A6BB2;
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+            }//.sttl
+            .content{
+                color: #5A6BB2;
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 3rem;
+            }//.content
+        }//.slide
+        &__slideCir{
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 35%;
+            width : 30%;
+            list-style-type: none;
+            text-align: center;
+            li{
+                margin: 0 0.25rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                background: #A2A2A2;
+                border-radius: 50%;
+                cursor: pointer;
+            }//li
+            .active{
+                background: #5A6BB2;
+            }//.active
+        }//.slideCir
+    }
+    &__entryBtn{
+        margin: 3rem 20%;
+        width: 60%;
+        height: 5rem;
+        @include main_btn();
+        background: #9CCECE;
+        box-shadow: 3px 2px 0 2px #5D8686;
+        color: #fff;
+    }
+}//.howtouse
+
+
+
+

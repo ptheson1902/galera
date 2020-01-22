@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104.5" height="103.339" viewBox="0 0 104.5 103.339">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="104.5" height="103.339" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_18" data-name="長方形 18" width="61.445" height="59.306" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_71" data-name="グループ 71" transform="translate(-57.5 -379.661)">
+    <g id="グループ_70" data-name="グループ 70">
+      <g id="リピートグリッド_1" data-name="リピートグリッド 1" transform="translate(57.5 379.661)" clip-path="url(#clip-path)">
+        <g transform="translate(-57.5 -379.661)">
+          <rect id="長方形_48" data-name="長方形 48" width="100" height="100" rx="12" transform="translate(62 383)" fill="#4d935d" opacity="0.799"/>
+          <g id="グループ_38" data-name="グループ 38" transform="translate(8.604)">
+            <rect id="長方形_29" data-name="長方形 29" width="100" height="100" rx="12" transform="translate(49.396 380.161)" fill="#fff" stroke="#c9c9c9" stroke-miterlimit="10" stroke-width="1"/>
+            <g id="グループ_4" data-name="グループ 4" transform="translate(69.411 402.476)">
+              <g id="グループ_3" data-name="グループ 3" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+                <path id="パス_4" data-name="パス 4" d="M34.123,0H2.233A2.241,2.241,0,0,0,0,2.233V20.847a2.241,2.241,0,0,0,2.233,2.233h3.83L4.25,29.667l7.118-6.587H34.123a2.241,2.241,0,0,0,2.233-2.233V2.233A2.241,2.241,0,0,0,34.123,0" transform="translate(0 0)" fill="#76c7dc"/>
+                <path id="パス_5" data-name="パス 5" d="M45.355,13.422H13.467a2.24,2.24,0,0,0-2.233,2.233V34.267A2.239,2.239,0,0,0,13.467,36.5H35.327l6.5,6.249L41.009,36.5h4.346a2.237,2.237,0,0,0,2.233-2.233V15.655a2.239,2.239,0,0,0-2.233-2.233" transform="translate(13.857 16.556)" fill="#e86e72"/>
+                <path id="パス_6" data-name="パス 6" d="M21.272,22.031a1.081,1.081,0,1,1-1.081-1.081,1.08,1.08,0,0,1,1.081,1.081" transform="translate(23.572 25.841)" fill="#484949"/>
+                <path id="パス_7" data-name="パス 7" d="M20.495,26.857S16.588,14.6,20.287,14.9s.208,11.954.208,11.954" transform="translate(23.06 18.376)" fill="#484949"/>
+                <text id="_" data-name="?" transform="translate(12.334 17.767)" fill="#484949" font-size="18" font-family="KozGoPr6N-Regular, Kozuka Gothic Pr6N"><tspan x="0" y="0">?</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

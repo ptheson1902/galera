@@ -1,0 +1,122 @@
+<svg id="グループ_55" data-name="グループ 55" xmlns="http://www.w3.org/2000/svg" width="375" height="210" viewBox="0 0 375 210">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bfdfdf;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #f3e8e8;
+      }
+
+      .cls-4 {
+        fill: #ee8277;
+      }
+
+      .cls-5 {
+        fill: #f6b07c;
+      }
+
+      .cls-6 {
+        fill: #f9f1ac;
+      }
+
+      .cls-7 {
+        fill: #b3d8a3;
+      }
+
+      .cls-8 {
+        fill: #afb4da;
+      }
+
+      .cls-9 {
+        fill: #9d88bf;
+      }
+
+      .cls-10 {
+        fill: #e5e5e5;
+      }
+
+      .cls-11 {
+        fill: #ee7c51;
+      }
+
+      .cls-12 {
+        fill: #798aa6;
+      }
+
+      .cls-13 {
+        fill: #a6d9df;
+      }
+
+      .cls-14 {
+        fill: none;
+        stroke: #a6d9df;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-15 {
+        fill: #b2b2c9;
+      }
+
+      .cls-16 {
+        fill: #79c178;
+      }
+
+      .cls-17 {
+        fill: #ee7c5e;
+      }
+
+      .cls-18 {
+        fill: #e1d87e;
+      }
+
+      .cls-19 {
+        fill: #797fbc;
+      }
+    </style>
+  </defs>
+  <path id="パス_13" data-name="パス 13" class="cls-1" d="M375,203.143S324,210,279,210,129,195.857,87,195.857s-87,7.286-87,7.286V0H375Z"/>
+  <circle id="楕円形_15" data-name="楕円形 15" class="cls-2" cx="60" cy="60" r="60" transform="translate(60 50)"/>
+  <circle id="楕円形_16" data-name="楕円形 16" class="cls-2" cx="60" cy="60" r="60" transform="translate(195 30)"/>
+  <g id="グループ_46" data-name="グループ 46" transform="translate(72 80.038)">
+    <g id="グループ_45" data-name="グループ 45">
+      <path id="パス_139" data-name="パス 139" class="cls-3" d="M34.9,0A41.212,41.212,0,0,0,17.542,3.756a2.986,2.986,0,0,0-.962,4.672,8.359,8.359,0,0,1,2.107,6.412,8.483,8.483,0,0,1-7.512,7.6,8.227,8.227,0,0,1-5.45-1.282,3.435,3.435,0,0,0-5.13,2.2A21.891,21.891,0,0,0,0,28.535C0,44.291,15.619,57.069,34.9,57.069S69.8,44.291,69.8,28.535,54.184,0,34.9,0Z"/>
+      <circle id="楕円形_8" data-name="楕円形 8" class="cls-4" cx="3.939" cy="3.939" r="3.939" transform="translate(8.977 31.695)"/>
+      <circle id="楕円形_9" data-name="楕円形 9" class="cls-5" cx="3.939" cy="3.939" r="3.939" transform="translate(21.298 41.268)"/>
+      <circle id="楕円形_10" data-name="楕円形 10" class="cls-6" cx="3.939" cy="3.939" r="3.939" transform="translate(38.932 41.863)"/>
+      <circle id="楕円形_11" data-name="楕円形 11" class="cls-7" cx="3.939" cy="3.939" r="3.939" transform="translate(50.932 32.474)"/>
+      <circle id="楕円形_12" data-name="楕円形 12" class="cls-8" cx="3.939" cy="3.939" r="3.939" transform="translate(51.207 15.573)"/>
+      <circle id="楕円形_13" data-name="楕円形 13" class="cls-9" cx="3.939" cy="3.939" r="3.939" transform="translate(34.535 5.725)"/>
+      <circle id="楕円形_14" data-name="楕円形 14" class="cls-4" cx="3.939" cy="3.939" r="3.939" transform="translate(8.977 31.695)"/>
+    </g>
+    <path id="パス_140" data-name="パス 140" class="cls-10" d="M145.123,43.452c3.252,3.8,3.481,9.023.458,11.588S137.474,56.6,134.222,52.8s1.557-8.657-.458-11.588C130.925,37.085,141.871,39.65,145.123,43.452Z" transform="translate(-72.115 -21.192)"/>
+    <path id="パス_141" data-name="パス 141" class="cls-4" d="M145.123,43.725c-3.16-3.893-14.2-6.366-11.359-2.244,2.015,2.931-2.794,7.786.458,11.588,0,0,5.725,1.649,4.168-2.29s2.7-4.122,4.4-2.886C144.436,49.129,147.413,46.564,145.123,43.725Z" transform="translate(-72.115 -21.327)"/>
+    <path id="パス_142" data-name="パス 142" class="cls-11" d="M181.527,98.981l-.558.511a2.279,2.279,0,0,1-3.151-.2L158.274,77.682a2.2,2.2,0,0,1,.2-3.1l.558-.511a2.279,2.279,0,0,1,3.151.2l19.543,21.613A2.2,2.2,0,0,1,181.527,98.981Z" transform="translate(-85.485 -39.85)"/>
+  </g>
+  <g id="グループ_51" data-name="グループ 51" transform="translate(210 63)">
+    <g id="グループ_48" data-name="グループ 48" transform="translate(70.205 40.567)">
+      <g id="グループ_47" data-name="グループ 47" transform="translate(0 0)">
+        <ellipse id="楕円形_17" data-name="楕円形 17" class="cls-12" cx="8.804" cy="6.398" rx="8.804" ry="6.398" transform="translate(0 15.038) rotate(-58.661)"/>
+        <path id="パス_143" data-name="パス 143" class="cls-13" d="M159.936,92.2h0a.578.578,0,0,1-.2-.768l1.126-1.791a.578.578,0,0,1,.768-.2h0a.578.578,0,0,1,.2.768L160.7,91.99A.578.578,0,0,1,159.936,92.2Z" transform="translate(-148.144 -84.189)"/>
+      </g>
+      <line id="線_24" data-name="線 24" class="cls-14" x1="3.583" y2="5.937" transform="translate(11.229 3.042)"/>
+      <line id="線_25" data-name="線 25" class="cls-14" x2="10.851" y2="6.603" transform="translate(5.855 5.652)"/>
+    </g>
+    <g id="グループ_50" data-name="グループ 50">
+      <g id="グループ_49" data-name="グループ 49">
+        <rect id="長方形_25" data-name="長方形 25" class="cls-15" width="84.556" height="40.333"/>
+        <path id="パス_144" data-name="パス 144" class="cls-15" d="M69.135,79.2H58.642v7.934H41.7v2.917H85.872V87.134H69.135Z" transform="translate(-20.356 -38.662)"/>
+      </g>
+      <rect id="長方形_26" data-name="長方形 26" class="cls-2" width="75.701" height="33.986" transform="translate(4.504 3.378)"/>
+      <path id="パス_145" data-name="パス 145" class="cls-16" d="M82.864,25.387H14.533A1.431,1.431,0,0,1,13.1,23.954V12.233A1.431,1.431,0,0,1,14.533,10.8H82.864A1.431,1.431,0,0,1,84.3,12.233V23.954A1.4,1.4,0,0,1,82.864,25.387Z" transform="translate(-6.395 -5.272)"/>
+      <path id="パス_146" data-name="パス 146" class="cls-17" d="M32.857,57.97H14.533A1.431,1.431,0,0,1,13.1,56.537v-8.8A1.431,1.431,0,0,1,14.533,46.3H32.857a1.431,1.431,0,0,1,1.433,1.433v8.8A1.37,1.37,0,0,1,32.857,57.97Z" transform="translate(-6.395 -22.602)"/>
+      <path id="パス_147" data-name="パス 147" class="cls-18" d="M81.757,57.97H63.433A1.431,1.431,0,0,1,62,56.537v-8.8A1.431,1.431,0,0,1,63.433,46.3H81.757a1.431,1.431,0,0,1,1.433,1.433v8.8A1.431,1.431,0,0,1,81.757,57.97Z" transform="translate(-30.266 -22.602)"/>
+      <path id="パス_148" data-name="パス 148" class="cls-19" d="M130.557,57.97H112.233a1.431,1.431,0,0,1-1.433-1.433v-8.8a1.431,1.431,0,0,1,1.433-1.433h18.324a1.431,1.431,0,0,1,1.433,1.433v8.8A1.4,1.4,0,0,1,130.557,57.97Z" transform="translate(-54.088 -22.602)"/>
+    </g>
+  </g>
+</svg>

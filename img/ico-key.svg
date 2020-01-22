@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="37" viewBox="0 0 31 37">
+  <g id="グループ_184" data-name="グループ 184" transform="translate(-1873.98 -1821.64)">
+    <g id="楕円形_25" data-name="楕円形 25" transform="translate(1878.98 1821.64)" fill="none" stroke="#707070" stroke-width="4">
+      <ellipse cx="10" cy="15" rx="10" ry="15" stroke="none"/>
+      <ellipse cx="10" cy="15" rx="8" ry="13" fill="none"/>
+    </g>
+    <g id="長方形_161" data-name="長方形 161" transform="translate(1873.98 1835.64)" fill="#faf1a1" stroke="#707070" stroke-width="1">
+      <rect width="31" height="23" rx="8" stroke="none"/>
+      <rect x="0.5" y="0.5" width="30" height="22" rx="7.5" fill="none"/>
+    </g>
+    <path id="合体_2" data-name="合体 2" d="M2.4,14V7.893A4.124,4.124,0,0,1,0,4.118,4.06,4.06,0,0,1,4,0,4.06,4.06,0,0,1,8,4.118,4.123,4.123,0,0,1,5.6,7.893V14Z" transform="translate(1884.98 1839.64)" fill="#696969"/>
+  </g>
+</svg>

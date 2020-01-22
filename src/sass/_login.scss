@@ -1,0 +1,132 @@
+//ログイン
+.loginMain{
+    width: 100%;
+    height: 100%;
+    animation: login_in 0.6s ease-in-out;
+    &__login{
+        padding: 15% 15% 5%;
+        height: 75%;
+        &__ttl{
+            padding: 1rem 0 2rem;
+            width: 100%;
+            text-align: center;
+        }//.ttl
+        &__itemName{
+            padding-left: 1rem;
+            font-size: 1.5rem;
+        }//.itemName
+        &__textbox{
+            padding: 1rem 0 1.5rem;
+            input{
+                padding: 0 1rem;
+                width: 100%;
+                height: 3.6rem;
+                background: #fff;
+                border-radius: 1.6rem/50%;
+            }//input
+        }//.textbox
+        &__loginBtn{
+            margin: 3.5rem 20% 0.5rem;
+            width: 60%;
+            @include main_btn();
+            color: #fff;
+            background: #7195C5;
+            box-shadow: 2px 3px 0 2px #426FAC;
+        }//.loginBtn
+    }//.login
+    &__control{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15%;
+        width: 100%;
+        height: 30%;
+        background: url(../img/back-namia.svg) no-repeat;
+        background-position: top left;
+        background-size: cover;
+        &__logo{
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }//.logo
+        &__link{
+            width: 70%;
+            button{
+                padding: 1rem 0;
+                width: 100%;
+            }//button
+        }//.link
+    }//.control
+}//.loginMain
+
+//単語が降るエリア
+.wordBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: #BFDFDF;
+    background-position: top left;
+    background-size: 100%;
+    overflow: hidden;
+    &__word{
+        position: absolute;
+        left: 0;
+        top: -10rem;
+        opacity: 0.5;
+        color: #eee;
+        &:nth-of-type(1){
+            animation: wordAni 14s ease-in-out 2s infinite;
+        }
+        &:nth-of-type(2){
+            animation: wordAni 14s ease-in-out 3.5s infinite;
+        }
+        &:nth-of-type(3){
+            animation: wordAni 14s ease-in-out 5s infinite;
+        }
+        &:nth-of-type(4){
+            animation: wordAni 14s ease-in-out 6.5s infinite;
+        }
+        &:nth-of-type(5){
+            animation: wordAni 14s ease-in-out 8s infinite;
+        }
+        &:nth-of-type(6){
+            animation: wordAni 14s ease-in-out 9.5s infinite;
+        }
+        &:nth-of-type(7){
+            animation: wordAni 14s ease-in-out 11s infinite;
+        }
+        &:nth-of-type(8){
+            animation: wordAni 14s ease-in-out 12.5s infinite;
+        }
+        &:nth-of-type(9){
+            animation: wordAni 14s ease-in-out 14s infinite;
+        }
+    }//.word
+}//.wordBg
+
+
+/* ~ 320px ポートレートモード（小画面スマートフォンの縦向き表示） */
+@media screen and (max-width:360px){
+    .loginMain{
+        &__login{
+            padding: 8% 15% 5%;
+            &__ttl{
+                padding: 1rem 0 2rem;
+            }//.ttl
+            &__textbox{
+                padding: 1rem 0;
+            }//.textbox
+            &__loginBtn{
+                margin: 2rem 20% 0.5rem;
+            }//.loginBtn
+        }//.login
+        &__control{
+            padding-top: 8%;
+        }//.control
+    }//.loginMain
+}

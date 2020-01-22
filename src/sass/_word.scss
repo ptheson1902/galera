@@ -1,0 +1,297 @@
+@import "ress";
+@import "common";
+
+@keyframes right_or_wrong{
+    0%{
+        opacity: 0;
+        transform: scale(3);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    90%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.design{
+    background: url("../img/design.svg") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    p{
+        border-bottom: 2px solid #EE7C51;
+        margin-left: 75%;
+    }//p
+}//.design
+.engineer{
+    background: url("../img/engineer.svg") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    p{
+        width: auto;
+        border-bottom: 2px solid #5577BB;
+        margin-left: 67%;
+    }//p
+}//.engineer
+.dictionary{
+    background: url("../img/dictionary.svg") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    p{
+        border-bottom: 2px solid #5BB653;
+        margin-left: 60%;
+    }//p
+}//.dictionary
+.word{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    &__list{
+        margin-top: 14rem;
+        list-style-type: none;
+        &__item{
+            margin: 2rem auto;
+            height: 12rem;
+            width: 29rem;
+            cursor: pointer;
+            p{
+                position: relative;
+                top: 1.5rem;
+                right: 2.5rem;
+                font-size: 2rem;
+                text-align: center;
+                pointer-events: none;
+            }//p
+        }//.item
+    }//.list
+}//.word
+.wordTest{
+    padding: 36% 0;
+    width: 100%;
+    color: #626262;
+    &__list{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .itemName{
+            margin: 0 auto;
+            width: 29rem;
+            height: 12rem;
+            transform: scale(0.9);
+            p{
+                position: relative;
+                top: 1.5rem;
+                right: 2.5rem;
+                font-size: 2rem;
+                text-align: center;
+            }//p
+        }//.itemName
+        &__read{
+            margin: 6rem 0;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            text-align: center;
+        }//read
+        &__btn{
+            margin: 0 auto;
+            width: 20rem;
+            height: 5rem;
+            background: #9CCECE;
+            font-size: 3rem;
+            color: #fff;
+            line-height: 5rem;
+            border-radius: 1.2rem;
+            letter-spacing: 0.5rem;
+            box-shadow: 5px 5px 0 #5D8686;
+        }//input
+    }//.list
+}//.wordTest
+.newWord{
+    padding-top: 10rem;
+    width: 100%;
+    color: #626262;
+    &__list{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        &__true{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color:#FF5F5F;
+            font-size: 30rem;
+            animation: right_or_wrong 1.6s linear forwards;
+            transform-origin: center center;
+        }//.true
+        &__false{
+            position: absolute;
+            top: -8%;
+            align-items: center;
+            justify-content: center;
+            animation: right_or_wrong 1.6s linear forwards;
+            transform-origin: center center;
+            &__border1{
+                position: absolute;
+                top: 0%;
+                left: 35%;
+                width: 30rem;
+                height: 30rem;
+                border-bottom: 1rem solid #5577BB;
+                transform: rotate(45deg);
+            }//.border1
+            &__border2{
+                position: relative;
+                top: -35%;
+                left: -35%;
+                width: 30rem;
+                height: 30rem;
+                border-right: 1rem solid #5577BB;
+                transform: rotate(45deg);
+            }//.border2
+        }//.false
+        &__ttl{
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem 5rem 10rem;
+            width: 100%;
+            &__lesson{
+                font-size: 2rem;
+                text-align: left;
+            }//.lesson
+            &__typeFlag{
+                width: 10rem;
+                height: 3rem;
+                background: #F1DB94;
+                border-radius: 0.5rem;
+                color: #fff;
+                font-size: 1.8rem;
+                line-height: 3rem;
+                text-align: center;
+            }//typeFlag
+        }//.ttl
+        &__question{
+            position: relative;
+            padding: 0 5rem;
+            top: -6rem;
+            font-size: 2.5rem;
+            text-align: center;
+        }//question
+        &__ans{
+            .choose_on{
+                color: #fff;
+                background: #F45589;
+            }//.choose_on
+            &__list{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                list-style-type: none;
+                &__item{
+                    margin: 0 auto 2.5rem;
+                    width: 26rem;
+                    height: 3.5rem;
+                    background: #F4E489;
+                    line-height: 3rem;
+                    font-size: 1.5rem;
+                    border-radius: 1.2rem;
+                    cursor: pointer;
+                }//.item
+            }//.list
+        }//.ans
+    }//.list
+}//.newWord
+.wordPoint{
+    padding: 40% 0;
+    width: 100%;
+    color: #626262;
+    &__list{
+        width: 100%;
+        &__typeFlag{
+            margin: 0 auto;
+            width: 10rem;
+            height: 3rem;
+            background: #F1DB94;
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            text-align: center;
+        }//.typeFlag
+        &__title{
+            padding-top: 3rem;
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: 0.5rem;
+        }//.title
+        &__item{
+            width: 100%;
+            &__box{
+                position: relative;
+                margin: 5rem auto;
+                height: 8rem;
+                width: 16rem;
+                text-align: center;
+                list-style-type: none;
+                transform: scale(1.5);
+                &__box1{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    height: 9rem;
+                    width: 15rem;
+                    border: solid 2px #FDC475;
+                }//.box1
+                &__box2{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 10;
+                    height: 9rem;
+                    width: 15rem;
+                    border: solid 2px #FDC475;
+                }//.box2
+                &__point{
+                    position: relative;
+                    top: 30%;
+                    font-size: 3rem;
+                    text-align: center;
+                }//.box
+            }
+            &__button{
+                margin-top: 7rem;
+                width: 100%;
+                list-style-type: none;
+                text-align: center;
+                &__wordNote,&__next,&__comeBack{
+                    margin: 4rem auto 1.5rem;
+                    width: 14rem;
+                    height: 3.5rem;
+                    background: #9BC674;
+                    border-radius: 0.5rem;
+                    color: #fff;
+                    font-size: 1.6rem;
+                    line-height: 3.5rem;
+                    box-shadow: 3px 2.5px 0 1px #6BA338;
+                }//.oneMoreTime
+                &__comeBack{
+                    background: #F8ED89;
+                    color: #707070;
+                    font-size: 1.6rem;
+                    box-shadow: 3px 2.5px 0 1px #E2CA00;
+                }//.comeBack
+            }//..button
+        }//.item
+    }//.list
+}//.wordPoint

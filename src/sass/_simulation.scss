@@ -1,0 +1,270 @@
+//シミュレーション
+.simulation{
+    width: 100%;
+    height: 100%;
+    &__type{
+        margin-bottom: 10rem;
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30%;
+            list-style-type: none;
+            &__item{
+                width: 40%;
+                text-align: center;
+                font-weight: normal;
+                &:nth-of-type(2n){
+                    margin: 1.5rem 10% 0 0;
+                }
+                &:nth-of-type(2n-1){
+                    margin: 1.5rem 0 0 10%;
+                }
+                figure{
+                    cursor: pointer;
+                }//figure
+                p{
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    pointer-events: none;
+                }//p
+                img{
+                    margin-bottom: 0.5rem;
+                    pointer-events: none;
+                }//img
+            }//.item
+        }//.list
+    }//.type
+
+    //simulation目次リスト
+    &__menu{
+        width: 100%;
+        height: 100%;
+        &__lessonArea{
+            padding: 1.5rem 5% 0;
+            margin: 10rem 0;
+            height: 90%;
+            overflow-y: scroll;
+            .notkeyBack{
+                background: #9BC674;
+            }//.notkeyBack
+            .keyBack{
+                background: #B5B5B5;
+            }//.keyBack
+            .pointer{
+                cursor: pointer;
+            }//.pointer
+            &__item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem 0;
+                width: 100%;
+                height: 7rem;
+                background: #F7F7F7;
+                border-radius: 1rem;
+                box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+                font-size: 2rem;
+                .mark{
+                    @include item_mark();
+                    pointer-events: none;
+                }//.mark
+                .ttl{
+                    width: 40%;
+                    text-align: center;
+                    pointer-events: none;
+                }//.ttl
+                .key{
+                    margin: 1.2rem 1.5rem;
+                    width: auto;
+                    height: auto;
+                    text-align: center;
+                    pointer-events: none;
+                    img{
+                        width: 2.6rem;
+                        height: auto;
+                    }//img
+                }//.key
+                .num{
+                    width: auto;
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    pointer-events: none;
+                }//.num
+            }//.item
+        }//.lessonArea
+        &__startArea{
+            position: fixed;
+            bottom: 0;
+            margin-bottom: 7rem;
+            padding: 3rem 15%;
+            width: 100%;
+            height: 11rem;
+            background: #EEE870;
+            &__btn{
+                width: 100%;
+                height: 5rem;
+                background: #fff;
+                border-radius: 1rem;
+                font-size: 1.8rem;
+                text-align: center;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+            }//.btn
+        }//.startArea
+    }//.menu
+
+    //simulation問題画面
+    &__question{
+        padding: 6rem 5% 0rem;
+        &__ttl{
+            margin: 1.5rem 0;
+        }//.ttl
+        &__avatar{
+            position: relative;
+            margin-bottom: 2.5rem;
+            .mark{
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include item_mark();
+                background: #9BC674;
+            }//.mark
+            .avatar{
+                width: 100%;
+                height: auto;
+                text-align: center;
+                @include dresson_small();
+                z-index: 0;
+            }//.avatar
+        }//.avatar
+        &__item{
+            transform: translateY(-5rem);
+            .option_choose{
+                background: #FFEC4A;
+            }
+            .option_none{
+                background: #fff;
+            }
+            .ttl{
+                position: relative;
+                z-index: 30;
+                margin: 0 0 1rem;
+                padding: 1rem 1.5rem;
+                width: 100%;
+                height: 12rem;
+                background: #fff;
+                border: 1px solid #707070;
+                text-align: center;
+                font-size: 2rem;
+                border-radius: 0.8rem;
+            }//.ttl
+            .option{
+                margin: 0.5% 5%;
+                width: 90%;
+                height: 4rem;
+                line-height: 4rem;
+                text-align: center;
+                border: 1px solid #707070;
+                border-radius: 0.8rem;
+            }//.option
+        }//.item
+    }//.question
+
+    //結果画面
+    &__result{
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        margin: -2rem 5%;
+        padding: 2rem 3rem 3rem;
+        width: 90%;
+        height: 90%;
+        background: #D3EAEA;
+        border-radius: 2rem;
+        text-align: center;
+        .switchA{
+            color: #FF6767;
+        }
+        .switchB{
+            color: #5C7CFF;
+        }
+        &__ttl{
+            margin: 3rem 0;
+            text-align: center;
+            font-size: 3rem;
+            b{
+                display: inline-block;
+                font-weight: bold;
+                transform: skew(30deg);
+            }//b
+        }//.ttl
+        &__num{
+            margin: 2rem 0;
+            font-size: 3rem;
+            span{
+                font-size: 4rem;
+            }//span
+        }//.num
+        &__sttl{
+            margin: 2rem 0 0.5rem;
+            text-align: left;
+        }//.sttl
+        &__desc{
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.6rem;
+            font-size: 2.2rem;
+            border-bottom: 1px dotted #707070;
+        }//.desc
+        .next{
+            position: absolute;
+            left: 0;
+            bottom: 1rem;
+            color: #707070;
+            background: #F8ED89;
+            box-shadow: 2px 2px 0 2px #E2CA00;
+        }//.next
+        .return,.nextLabel{
+            position: absolute;
+            left: 0;
+            bottom: 2rem;
+            background: #9BC674;
+            color: #fff;
+            box-shadow: 2px 3px 0 2px #5D8686;
+        }//.return
+        &__btn{
+            margin: 2rem 10%;
+            width: 80%;
+            @include main_btn();
+        }//.btn
+        &__logo{
+            margin: 3rem 0 1rem;
+            width: auto;
+            height: 12rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }//img
+        }//.logo
+        &__list{
+            margin: 1rem 0 5rem;
+            width: 100%;
+            list-style-type: none;
+            li{
+                margin: 1rem 3rem;
+                padding: 0 2rem;
+                color: #707070;
+                background: #fff;
+                font-size: 2rem;
+                cursor: pointer;
+                @include main_btn();
+            }//li
+        }//.list
+        //解説
+        &__content{
+            width: 100%;
+            height: 45%;
+            line-height: 2.4rem;
+            text-align: left;
+        }//.content
+    }//.result
+}//.simulation

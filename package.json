@@ -1,0 +1,20 @@
+{
+  "name": "syuseika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "syuseika",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.2.6",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}

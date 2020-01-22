@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="ここに説明文を設定"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@twitteraccount"/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content="サイト説明文"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- <link rel="shortcut icon" href="img/asra_favi.ico" type="image/vnd.microsoft.icon"/> -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>ガレア</title>
+</head>
+<body>
+    <!-- ログインの背景で降る言葉の入れ箱 -->
+    <div class="wordBg flex">
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+        <p class="wordBg__word"></p>
+    </div>
+
+    <!-- ログイン関係の承認か拒否 -->
+    <seciton class="loginSuccess hidden">
+        <p class="loginSuccess__enTtl">Welcome back to Galea!</p>
+        <p class="loginSuccess__jaTtl"><span>qh0821</span> さん、お帰り！</p>
+        <p class="loginSuccess__content">ただ今のポイント数　<span>380</span></p>
+        <p class="loginSuccess__reference">企業の基準ポイント　<span></span></p>
+        <button class="loginSuccess__btn">Enter</button>
+    </seciton>
+
+    <section class="loginFailure hidden">
+        <p class="loginFailure__enTtl">Failure of your login.</p>
+        <p class="loginFailure__jaTtl">ログイン失敗</p>
+        <p class="loginFailure__content">おそらく、<br>ユーザー名かパスワードが誤りました。</p>
+        <button class="loginFailure__btn">Back</button>
+    </section>
+
+    <!-- ローディング と ログイン -->
+    <section class="loading flex">
+      <p><img src="img/ico-g.svg" alt=""></p>
+      <p><img src="img/ico-a01.svg" alt=""></p>
+      <p><img src="img/ico-l.svg" alt=""></p>
+      <p><img src="img/ico-e.svg" alt=""></p>
+      <p><img src="img/ico-a02.svg" alt=""></p>
+    </section>
+    <section class="loginMain hidden">
+        <div class="loginMain__login">
+            <p class="loginMain__login__ttl"><img src="img/ico-loginTtl.svg" alt="galea"></p>
+            <p class="loginMain__login__itemName">ユーザーネーム</p>
+            <p class="loginMain__login__textbox"><input class="username" type="text" name="username"></p>
+            <p class="loginMain__login__itemName">パスワード</p>
+            <p class="loginMain__login__textbox"><input class="password" type="password" name="password"></p>
+            <p class="loginMain__login__state"><label for="state"><input id="state" name="state" type="checkbox"> ログイン状態を覚える</label></p>
+            <button class="loginMain__login__loginBtn">ログイン</button>
+        </div>
+        <div class="loginMain__control">
+            <p class="loginMain__control__logo"><img src="img/ico-logoMan.svg" alt=""></p>
+            <p class="loginMain__control__link">
+            <button class="userSiginBtn">会員登録はこちら</button>
+            <button class="companySiginBtn">企業登録はこちら</button>
+            </p>
+        </div>
+    </section>
+
+    <!-- 新しいメッセージのリスト -->
+    <ul class="newList hidden">
+        <li class="hidden">
+            <time datetime="">2019-8-15 15:35</time>
+            <span></span> さんからの新しいメッセージ
+        </li>
+    </ul>
+    
+    <!-- ワード画面 -->
+    <main class="word hidden">
+        <div class="newMess"><span class="hidden"></span><img src="img/ico-newMess.svg" alt=""></div>
+        <h1 class="word__title">word</h1>
+        <ul class="word__list">
+            <li class="word__list__item design" typename="design">
+                <p>DESIGN</p>
+            </li>
+            <li class="word__list__item engineer" typename="engineer">
+                <p>ENGINEER</p>
+            </li>
+            <li class="word__list__item dictionary" typename="dictionary">
+                <p>DICTIONARY</p>
+            </li>
+        </ul>
+        <div class="wordTest hidden">
+            <p class="back"><img src="img/ico-back.svg" alt=""></p>
+            <section class="wordTest__list">
+                <div class="itemName engineer">
+                    <p>ENGINEER</p>
+                </div>
+                <p class="wordTest__list__read">準備はいいですか？<br>Are you OK?</p>
+                <button class="wordTest__list__btn" type="button" name="start">start</button>
+            </section>
+        </div>
+    
+        <section class="newWord hidden">
+            <seciton class="newWord__list">
+                <div class="newWord__list__ttl">
+                    <p class="newWord__list__ttl__lesson">Lesson <span>1</span></p>
+                    <p class="newWord__list__ttl__typeFlag">DESIGN</p>
+                </div>
+                <p class="newWord__list__question">Apple</p>
+                <p class="newWord__list__true hidden">◯</p>
+                <div class="newWord__list__false hidden">
+                    <p class="newWord__list__false__border1"></p>
+                    <p class="newWord__list__false__border2"></p>
+                </div>
+                <div class="newWord__list__ans">
+                    <ul class="newWord__list__ans__list">
+                        <li class="newWord__list__ans__list__item">りんご</li>
+                        <li class="newWord__list__ans__list__item">ゴリラ</li>
+                        <li class="newWord__list__ans__list__item">ラッパ"</li>
+                        <li class="newWord__list__ans__list__item">パンツ</li>
+                    </ul>
+                </div>
+            </seciton>
+        </section>
+        <section class="wordPoint hidden">
+            <div class="wordPoint__list">
+                <p class="wordPoint__list__typeFlag">DESIGN</p>
+                <h2 class="wordPoint__list__title">テスト結果</h2>
+                <div class="wordPoint__list__item">
+                    <ul class="wordPoint__list__item__box">
+                        <li class="wordPoint__list__item__box__box1"></li>
+                        <li class="wordPoint__list__item__box__box2"></li>
+                        <li class="wordPoint__list__item__box__point"><span>5</span> / 5</li>
+                    </ul>
+                </div>
+                <div class="wordPoint__list__item">
+                    <ul class="wordPoint__list__item__button">
+                        <li class="wordPoint__list__item__button__next hidden">To next lesson</li>
+                        <li class="wordPoint__list__item__button__wordNote">復習する</li>
+                        <li class="wordPoint__list__item__button__comeBack">Next Lesson</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- シミュレーション画面 -->
+    <main class="simulation hidden">
+        <div class="newMess"><span class="hidden"></span><img src="img/ico-newMess.svg" alt=""></div>
+        <h1 class="simulation__title">simulation</h1>
+        <section class="simulation__type">
+            <ul class="simulation__type__list">
+                <li class="simulation__type__list__item">
+                    <figure>
+                        <img src="img/ico-phone.svg" alt="電話">
+                        <p class="itemName">電&ensp;話</p>
+                        <p class="itemNum"><span>0</span>/30</p>
+                    </figure>
+                </li>
+                <li class="simulation__type__list__item">
+                    <figure>
+                        <img src="img/ico-meetting.svg" alt="電話">
+                        <p class="itemName">ミーティング</p>
+                        <p class="itemNum"><span>0</span>/30</p>
+                    </figure>
+                </li>
+                <li class="simulation__type__list__item">
+                    <figure>
+                        <img src="img/ico-contact.svg" alt="電話">
+                        <p class="itemName">業務連絡</p>
+                        <p class="itemNum"><span>0</span>/30</p>
+                    </figure>
+                </li>
+                <li class="simulation__type__list__item">
+                    <figure>
+                        <img src="img/ico-presen.svg" alt="電話">
+                        <p class="itemName">プレゼン</p>
+                        <p class="itemNum"><span>0</span>/30</p>
+                    </figure>
+                </li>
+                <li class="simulation__type__list__item">
+                    <figure>
+                        <img src="img/ico-seminar.svg" alt="電話">
+                        <p class="itemName">セミナー</p>
+                        <p class="itemNum"><span>0</span>/30</p>
+                    </figure>
+                </li>
+                <li class="simulation__type__list__item">
+                    <figure>
+                        <img src="img/ico-request.svg" alt="電話">
+                        <p class="itemName">依&ensp;頼</p>
+                        <p class="itemNum"><span>0</span>/30</p>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <section class="simulation__menu hidden">
+            <p class="back"><img src="img/ico-back.svg" alt=""></p>
+            <section class="simulation__menu__lessonArea">
+                <div class="simulation__menu__lessonArea__item">
+                    <p class="mark keyBack"><img src="img/ico-phoneIn.svg" alt=""></p>
+                    <p class="ttl">lesson1</p>
+                    <p class="key"><img src="img/ico-key.svg" alt=""></p>
+                    <p class="num"><span>0</span>/5</p>
+                </div>
+                <div class="simulation__menu__lessonArea__item">
+                    <p class="mark keyBack"><img src="img/ico-phoneIn.svg" alt=""></p>
+                    <p class="ttl">lesson2</p>
+                    <p class="key"><img src="img/ico-key.svg" alt=""></p>
+                    <p class="num"><span>0</span>/5</p>
+                </div>
+                <div class="simulation__menu__lessonArea__item">
+                    <p class="mark keyBack"><img src="img/ico-phoneIn.svg" alt=""></p>
+                    <p class="ttl">lesson3</p>
+                    <p class="key"><img src="img/ico-key.svg" alt=""></p>
+                    <p class="num"><span>0</span>/5</p>
+                </div>
+                <div class="simulation__menu__lessonArea__item">
+                    <p class="mark keyBack"><img src="img/ico-phoneIn.svg" alt=""></p>
+                    <p class="ttl">lesson4</p>
+                    <p class="key"><img src="img/ico-key.svg" alt=""></p>
+                    <p class="num"><span>0</span>/5</p>
+                </div>
+                <div class="simulation__menu__lessonArea__item">
+                    <p class="mark keyBack"><img src="img/ico-phoneIn.svg" alt=""></p>
+                    <p class="ttl">lesson5</p>
+                    <p class="key"><img src="img/ico-key.svg" alt=""></p>
+                    <p class="num"><span>0</span>/5</p>
+                </div>
+                <div class="simulation__menu__lessonArea__item">
+                    <p class="mark keyBack"><img src="img/ico-phoneIn.svg" alt=""></p>
+                    <p class="ttl">lesson6</p>
+                    <p class="key"><img src="img/ico-key.svg" alt=""></p>
+                    <p class="num"><span>0</span>/5</p>
+                </div>          
+            </section>
+            <div class="simulation__menu__startArea">
+                <button class="simulation__menu__startArea__btn">最初から始める</button>
+            </div>
+        </section>
+        <section class="simulation__question hidden">
+            <p class="back"><img src="img/ico-back.svg" alt=""></p>
+            <h2 class="simulation__question__lesson"></h2>
+            <p class="simulation__question__ttl">Lesson <span class="lesssonNum">1</span>-<span class="qusetionNum">1</span></p>
+            <div class="simulation__question__avatar">
+                <p class="mark"><img src="img/ico-phoneIn.svg" alt=""></p>
+                <div class="avatar">
+                    <img class="accessory headband hidden" src="img/parts/illu-accessory-01.svg" alt="headband">
+                    <img class="accessory glass hidden" src="img/parts/illu-accessory-02.svg" alt="glass">
+                    <img class="accessory blackhat hidden" src="img/parts/illu-accessory-04.svg" alt="blackhat">
+                    <img class="accessory devil hidden" src="img/parts/illu-accessory-05.svg" alt="devil">
+                    <img class="accessory rabit hidden" src="img/parts/illu-accessory-06.svg" alt="rabit">
+                    <img class="accessory ribbon hidden" src="img/parts/illu-accessory-03.svg" alt="ribbon">
+                    <img class="head" src="img/avatarHead.svg" alt="head">
+                    <img class="body" src="img/avatarBody.svg" alt="body">
+                </div>
+            </div>
+            <div class="simulation__question__item">
+                <p class="ttl option_none"></p>
+                <button class="option" type="button"></button>
+                <button class="option" type="button"></button>
+                <button class="option" type="button"></button>
+                <button class="option" type="button"></button>
+            </div>
+        </section>
+        <section class="simulation__result hidden">
+            <p class="simulation__result__ttl switchB">Nice!!</p>
+            <p class="simulation__result__sttl">問題</p>
+            <p class="simulation__result__question">I hava a pen</p>
+            <p class="simulation__result__sttl">正解</p>
+            <p class="simulation__result__desc">I hava a pen</p>
+            <p class="simulation__result__sttl">解説</p>
+            <p class="simulation__result__content">txtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxt</p>
+            <button class="simulation__result__btn next">Next</button>
+        </section>
+        <section class="simulation__result hidden">
+            <p class="simulation__result__ttl switchA">Incorrect...</p>
+            <p class="simulation__result__sttl">問題</p>
+            <p class="simulation__result__question">I hava a pen</p>
+            <p class="simulation__result__sttl">正解</p>
+            <p class="simulation__result__desc">I hava a pen</p>
+            <p class="simulation__result__sttl">解説</p>
+            <p class="simulation__result__content">txtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxt</p>
+            <button class="simulation__result__btn next">Next</button>
+        </section>
+        <section class="simulation__result hidden">
+            <p class="simulation__result__sttl">問題</p>
+            <p class="simulation__result__question">I hava a pen</p>
+            <p class="simulation__result__sttl">正解</p>
+            <p class="simulation__result__desc">I hava a pen</p>
+            <p class="simulation__result__sttl">解説</p>
+            <p class="simulation__result__content">txtxtxtxtxtxtxtxtxtxtxtxtxtxtxtxt</p>
+            <button class="simulation__result__btn next">閉じる</button>
+        </section>
+        <section class="simulation__result hidden">
+            <p class="simulation__result__num"><span>5</span> / 5</p>
+            <p>lesson1</p>
+            <h3 class="simulation__result__ttl switchA"><b>//</b> clear //</h3>
+            <p class="simulation__result__logo"><img src="img/ico-logoMan.svg" alt=""></p>
+            <button class="simulation__result__btn nextLabel">Next label</button>
+            <p class="menuBack return">メニューに戻る</p>
+        </section>
+        <section class="simulation__result hidden">
+            <p class="simulation__result__num"><span>3</span> / 5</p>
+            <h3 class="simulation__result__ttl switchB">Umm...</h3>
+            <p class="simulation__result__sttl">間違えた問題</p>
+            <ul class="simulation__result__list">
+                <li class="hidden"></li>
+                <li class="hidden"></li>
+                <li class="hidden"></li>
+                <li class="hidden"></li>
+                <li class="hidden"></li>
+            </ul>
+            <button class="simulation__result__btn return">One more time</button>
+        </section>
+    </main>
+
+    <!-- ゲーム画面 -->
+    <main class="game hidden">
+        <div class="newMess"><span class="hidden"></span><img src="img/ico-newMess.svg" alt=""></div>
+        <h1 class="game__title">game</h1>
+        <p class="load hidden"><img src="img/ico-load.svg" alt="loading"></p>
+        <div class="game__start">
+            <p class="game__start__ttl">STEP<span>1</span></p>
+            <p class="game__start__btn">START</p>
+        </div>
+        <div class="game__main hidden">
+            <p class="game__main__point"></p>
+            <button class="game__main__historyBtn"><img src="img/ico-history.svg" alt=""><br>会話履歴</button>
+            <section class="game__main__top">
+                <div class="user hidden">
+                    <p>
+                        <img class="accessory headband hidden" src="img/parts/illu-accessory-01.svg" alt="headband">
+                        <img class="accessory glass hidden" src="img/parts/illu-accessory-02.svg" alt="glass">
+                        <img class="accessory blackhat hidden" src="img/parts/illu-accessory-04.svg" alt="blackhat">
+                        <img class="accessory devil hidden" src="img/parts/illu-accessory-05.svg" alt="devil">
+                        <img class="accessory rabit hidden" src="img/parts/illu-accessory-06.svg" alt="rabit">
+                        <img class="accessory ribbon hidden" src="img/parts/illu-accessory-03.svg" alt="ribbon">
+                        <img class="head" src="img/avatarHead.svg" alt="head">
+                        <img class="body" src="img/avatarBody.svg" alt="body">
+                    </p>
+                </div>
+                <div class="character">
+                    <img src="img/illu-cp.svg" alt="">
+                </div>
+            </section>
+            <section class="game__main__bottom">
+                <div class="game__main__bottom__text">
+                    <p class="question"></p>
+                    <div class="option hidden"><p class="choose hidden"></p><b>A</b><span></span></div>
+                    <div class="option hidden"><p class="choose hidden"></p><b>B</b><span></span></div>
+                </div>
+                <button class="game__main__bottom__microBtn hidden">Next</button>
+            </section>
+        </div>
+        <div class="game__history hidden">
+            <button class="game__history__back"><img src="img/ico-backWhite.svg" alt=""></button>
+            <div class="game__history__textArea__text hidden"><p class="people">＜ CP ＞</p><p class="text"></p></div>
+            <div class="game__history__textArea">
+                
+            </div>
+        </div>
+
+        <section class="game__result hidden">
+            <div class="game__result__resultArea">
+                <p class="game__result__resultArea__ttl switchA">Congratulations!</p>
+                <p class="game__result__resultArea__ttl switchB hidden">Umm.....!</p>
+                <p class="game__result__resultArea__get"><span class="mark">+</span><span class="point">10p</span><span class="parten">GET</span></p>
+                <div class="game__result__resultArea__graph">
+                    <p class="cirBack"></p>
+                    <svg viewBox="0 0 60 60" class="sda-anime">
+                        <circle cx="30" cy="30" r="15" fill="#fff"
+                        stroke="#D7EAEA"
+                        stroke-width="30"
+                        stroke-dashoffset="100"
+                        stroke-dasharray="100,10"/>
+                        <circle cx="30" cy="30" r="15" fill="#fff"
+                        stroke="#fff"
+                        stroke-width="10"
+                        stroke-dashoffset="100"
+                        stroke-dasharray="100,95"/>
+                    </svg>
+                    <p class="cirSmall"></p>
+                    <div class="point"><p class="getPoint"></p> / <p>3000p</p></div>
+                </div>
+                <button class="game__result__resultArea__btn">Next Step</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- マッチング画面 -->
+    <main class="matching hidden">
+        <div class="newMess"><span class="hidden"></span><img src="img/ico-newMess.svg" alt=""></div>
+        <p class="load"><img src="img/ico-load.svg" alt="loading"></p>
+        <h1 class="matching__title">matching</h1>
+        <section class="matching__content hidden">
+            <div class="matching__content__select">
+                <p class="matching__content__select__new border">最新</p>
+                <p class="matching__content__select__popular">人気</p>
+            </div>
+            <!-- officeコンテンツの例 -->
+            <section class="matching__content__officeArea__office hidden">
+                <p class="matching__content__officeArea__office__photo photo"><img src="" alt=""></p> 
+                <h2 class="matching__content__officeArea__office__name name">株式会社カノン</h2>
+                <p class="matching__content__officeArea__office__border border">borderline<span>500</span>~</p>
+                <p class="matching__content__officeArea__office__like like"><i class="fas fa-heart like_none"></i> <span>10</span></p>
+                <p class="matching__content__officeArea__office__explain explain">これはめちゃ良い会社です。これはめちゃ良い会社です。</p>
+            </section>
+            <div class="matching__content__officeArea">
+                
+            </div>
+            <p class="matching__content__nodata hidden">これ以上データはありません</p>
+            <p class="matching__content__more">もっと見る</p>
+        </section>
+
+        <section class="matching__officeDesc hidden">
+            <p class="back"><img src="img/ico-back.svg" alt=""></p>
+            <p class="matching__officeDesc__photo"><img src="" alt=""></p> 
+            <p class="matching__officeDesc__name">株式会社カノン</p>
+            <p class="matching__officeDesc__border">Borderline<span>500</span>~</p>
+            <p class="matching__officeDesc__like"><i class="fas fa-heart like_none"></i> <span>10</span></p>
+            <p class="matching__officeDesc__desc">これはめちゃ良い会社です。これはめちゃ良い会社です。これはめちゃ良い会社です。これはめちゃ良い会社です。これはめちゃ良い会社です。これはめちゃ良い会社です。これはめちゃ良い会社です。これはめちゃ良い会社です。</p>
+            <p class="matching__officeDesc__item">メール　　<span class="mail">kanon@kanon.com</span></p>
+            <p class="matching__officeDesc__item">携　帯　　<span class="phone">060-1234-5678</span></p>
+            <p class="matching__officeDesc__item">住　所　　<span class="address">大阪市 北区 中崎町 1-10-6</span></p>
+            <p class="matching__officeDesc__item">従業員数　<span class="people">640名</span></p>
+            <p class="matching__officeDesc__item">資本金　　<span class="money">未記入</span></p>
+            <p class="matching__officeDesc__item">代理人　　<span class="agent">未記入</span></p>
+            <p class="matching__officeDesc__length">残り <span>128</span> 字</p>
+            <p class="matching__officeDesc__text"><textarea placeholder="お問い合わせの場合、こちらにご入力ください。"></textarea></p>
+            <button class="matching__officeDesc__btn" type="button">送信</button>
+
+            <ul class="matching__officeDesc__queryForm hidden">
+                <li class="list">
+                    <p class="question">Q：<span>株式会社がリアは、どんな職種を募集していますか？</span></p>
+                    <p class="answer">A：<span>本社はWebデザイナーとエンジニアをメインに募集しています。</span></p>
+                </li>
+                <li class="list">
+                    <p class="question">Q：<span>株式会社がリアは、どんな職種を募集していますか？</span></p>
+                    <p class="answer">A：<span>本社はWebデザイナーとエンジニアをメインに募集しています。</span></p>
+                </li>
+            </ul>
+        </section>
+
+        <div class="matching__rejection hidden">
+            <p class="ttl">We're afraid to tell you.</p>
+            <p class="text">内容は入力されていません。</p>
+            <button class="btn">修正</button>
+        </div>
+
+        <div class="matching__success hidden">
+            <p class="ttl">We have accepted the post.</p>
+            <p class="text">内容審査および企業側の回答が通る次第、右上のボタンにてお知らせします。</p>
+            <button class="btn">OK</button>
+        </div>
+    </main>
+
+    <!-- マイページ画面 -->
+    <main class="mypage hidden">
+        <div class="newMess"><span class="hidden"></span><img src="img/ico-newMess.svg" alt=""></div>
+        <p class="load"><img src="img/ico-load.svg" alt="loading"></p>
+        <h1 class="mypage__title">my page</h1>
+        <div class="mypage__content">
+            <div class="mypage__content__user">
+                <p class="mypage__content__user__fix"><img src="img/ico-fix.svg" alt="修正"></p>
+                <p class="mypage__content__user__dresson">
+                    <img class="accessory headband hidden" src="img/parts/illu-accessory-01.svg" alt="headband">
+                    <img class="accessory glass hidden" src="img/parts/illu-accessory-02.svg" alt="glass">
+                    <img class="accessory blackhat hidden" src="img/parts/illu-accessory-04.svg" alt="blackhat">
+                    <img class="accessory devil hidden" src="img/parts/illu-accessory-05.svg" alt="devil">
+                    <img class="accessory rabit hidden" src="img/parts/illu-accessory-06.svg" alt="rabit">
+                    <img class="accessory ribbon hidden" src="img/parts/illu-accessory-03.svg" alt="ribbon">
+                    <img class="head" src="img/avatarHead.svg" alt="head">
+                    <img class="body" src="img/avatarBody.svg" alt="body">
+                </p>
+                <div class="mypage__content__user__message">
+                    <p class="name">qh0821</p>
+                    <p class="ttl">学びたい分野</p>
+                    <p class="content work">UIデザイン</p>
+                    <p class="ttl">勤めたい職種</p>
+                    <p class="content job">Webデザイナー</p>
+                </div>
+            </div>
+            <button class="mypage__content__dressBtn">着せ替え</button>
+        </div>
+        <div class="mypage__messageFix hidden">
+            <p class="back"><img src="img/ico-back.svg" alt=""></p>
+            <div class="mypage__messageFix__item userName">
+                <p class="mypage__messageFix__item__name">ユーザーネーム<span></span></p>
+                <p class="mypage__messageFix__item__mess"><input type="text" name="userName" placeholder="全角8文字 / 半角16文字以内"></p>
+            </div>
+    
+            <div class="mypage__messageFix__item mailAddress">
+                <p class="mypage__messageFix__item__name">メールアドレス<span></span></p>
+                <p class="mypage__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+            
+            <div class="mypage__messageFix__item occupation">
+                <p class="mypage__messageFix__item__name">勤めたい職種<span></span></p>
+                <p class="mypage__messageFix__item__option">
+                    <select name="occupation">
+                        <option value="0"> -- </option>
+                        <option value="1">Webデザイナー</option>
+                        <option value="2">Webエンジニア</option>
+                        <option value="3">Webディレクター</option>
+                    </select>
+                </p>
+            </div>
+    
+            <div class="mypage__messageFix__item field">
+                <p class="mypage__messageFix__item__name">学びたい分野</p>
+                <p class="mypage__messageFix__item__option">
+                    <select name="field">
+                        <option value="0"> -- </option>
+                        <option value="1">UIデザイン</option>
+                        <option value="2">フロントエンド</option>
+                        <option value="3">バックエンド</option>
+                        <option value="4">ウェブ設計・企画</option>
+                    </select>
+                </p>
+            </div>
+
+            <div class="mypage__messageFix__btn">
+                <button class="yes">完了</button>
+                <button class="no">キャンセル</button>
+            </div>
+
+            <p class="logout">ログアウト</p>
+        </div>
+      
+        <!-- 会社・マイページ -->
+        <div class="mypageCompany__content hidden">
+            <div class="mypageCompany__content__user flex">
+                <p class="mypageCompany__content__user__fix"><img src="img/ico-fix.svg" alt="修正"></p>
+                <div class="mypageCompany__content__user__message">
+                    <p class="name">株式会社ガリア</p>
+                    <p class="like">現在いいね数：<span></span></p>
+                    <div>
+                        <p class="content people"><b>従業員数</b>　<span>未記入</span></p>
+                        <p class="content money"><b>資本金</b>　<span>未記入</span></p>
+                        <p class="content agent"><b>代理人</b>　<span>未記入</span></p>
+                        <p class="content phone"><b>携　帯</b>　<span>未記入</span></p>
+                        <p class="content address"><b>住　所</b>　<span>未記入</span></p>
+                        <p class="content mail"><b>メール</b>　<span>未記入</span></p>
+                    </div>
+                </div>
+            </div>
+            <section class="mypageCompany__content__contact hidden">
+                <p class="back"><img src="img/ico-back.svg" alt=""></p>
+                <h2 class="ttl">お問い合わせ</h2>
+                <div class="contactArea__item hidden">
+                    <time class="date" datetime="">未記入</time>
+                    <p class="name">未記入</p>
+                    <p class="content">未記入</p>
+                    <p class="end hidden">回答済み</p>
+                    <p class="btn"><button class="resendBtn">返信する</button><button class="flyBtn">無視する</button></p>
+
+                    <div class="resendArea hidden">
+                        <textarea class="answer" placeholder="全角250文字 / 半角500文字以内"></textarea>
+                        <p><button class="sendBtn">送信する</button></p>
+                    </div>
+                </div>
+                <div class="contactArea">
+                    
+                </div>
+            </section>
+            <button class="mypageCompany__content__messAdjust">お問い合わせ管理</button>
+        </div>
+
+        <div class="mypageCompany__rejection hidden">
+            <p class="ttl">We're afraid to tell you.</p>
+            <p class="text">内容は入力されていません。</p>
+            <button class="btn">修正</button>
+        </div>
+
+        <div class="mypageCompany__success hidden">
+            <p class="ttl">We have accepted the post.</p>
+            <p class="text">内容審査が通る次第、質問する方にお知らせします。</p>
+            <button class="btn">OK</button>
+        </div>
+
+        <div class="mypageCompany__messageFix hidden">
+            <p class="back"><img src="img/ico-back.svg" alt=""></p>
+            <div class="mypageCompany__messageFix__item userName">
+                <p class="mypageCompany__messageFix__item__name">ユーザーネーム<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="userName" placeholder="全角8文字 / 半角16文字以内"></p>
+            </div>
+    
+            <div class="mypageCompany__messageFix__item mailAddress">
+                <p class="mypageCompany__messageFix__item__name">メールアドレス<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+            
+            <div class="mypageCompany__messageFix__item referencePoint">
+                <p class="mypageCompany__messageFix__item__name">基準ポイント<span></span></p>
+                <p class="mypageCompany__messageFix__item__pointArea"><input type="text" name="mailAddress" placeholder="*上限3000">P</p>
+                <button class="mypageCompany__messageFix__item__referenceBook">ポイント参考</button>
+            </div>
+
+            <div class="mypageCompany__messageFix__item phone">
+                <p class="mypageCompany__messageFix__item__name">携　帯<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+
+            <div class="mypageCompany__messageFix__item address">
+                <p class="mypageCompany__messageFix__item__name">住　所<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+
+            <div class="mypageCompany__messageFix__item people">
+                <p class="mypageCompany__messageFix__item__name">従業員数<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+
+            <div class="mypageCompany__messageFix__item money">
+                <p class="mypageCompany__messageFix__item__name">資本金<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+
+            <div class="mypageCompany__messageFix__item agent">
+                <p class="mypageCompany__messageFix__item__name">代理人<span></span></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+            </div>
+
+            <div class="mypageCompany__messageFix__item catch">
+                <p class="mypageCompany__messageFix__item__name">キャッチコピー<span></span></p>
+                <p class="mypageCompany__messageFix__item__messArea"><textarea name="catch" placeholder="全角32文字 / 半角64文字以内"></textarea></p>
+                <p class="mypageCompany__messageFix__item__commend">* 一覧に載せる情報なので、簡潔な一言のほうが推奨</p>
+            </div>
+
+            <div class="mypageCompany__messageFix__item image">
+                <p class="mypageCompany__messageFix__item__name">画像選択<span></span></p>
+                <!-- <div class="mypageCompany__messageFix__item__image">
+                    <label for="file_up" class="thumbView">
+                    <img src="" alt="">
+                    <button class="addImage" type="button">＋</button>
+                    </label>
+                    <input id="file_up" type="file" name="file">
+                </div> -->
+                <p class="mypageCompany__messageFix__item__commend">* 6M以内・幅600px/高300px以上</p>
+            </div>
+    
+            <div class="mypageCompany__messageFix__item companyDesc">
+                <p class="mypageCompany__messageFix__item__name">会社説明<span></span></p>
+                <p class="mypageCompany__messageFix__item__messArea"><textarea name="companyDesc" placeholder="全角300文字 / 半角600文字以内"></textarea>
+            </div>
+
+            <div class="mypageCompany__messageFix__btn">
+                <button class="yes">完了</button>
+                <button class="no">キャンセル</button>
+            </div>
+
+            <p class="logout">ログアウト</p>
+        </div>
+
+        <section class="mypage__item">
+            <h2 class="mypage__item__ttl">記録</h2>
+            <div>
+                <p class="itemTtl">正解数</p>
+                <p class="correct"><span>0</span></p>
+                <p class="itemTtl">正解率</p>
+                <p class="percent"><span>0</span> ％</p>
+                <p class="itemTtl">ポイント</p>
+                <p class="point"><span>0</span> P</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ユーザー登録 -->
+    <main class="signUser hidden">
+        <p class="back"><img src="img/ico-back.svg" alt=""></p>
+        <h1 class="signUser__title">会員登録</h1>
+
+        <div class="signUser__item userName">
+            <p class="signUser__item__name">ユーザーネーム<span></span></p>
+            <p class="signUser__item__mess"><input type="text" name="userName" placeholder="全角8文字 / 半角16文字以内"></p>
+        </div>
+
+        <div class="signUser__item mailAddress">
+            <p class="signUser__item__name">メールアドレス<span></span></p>
+            <p class="signUser__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+        </div>
+
+        <div class="signUser__item userPassword">
+            <p class="signUser__item__name">パスワード<span></span></p>
+            <p class="signUser__item__mess"><input type="password" name="password" placeholder="半角英数16文字以内"></p>
+        </div>
+
+        <div class="signUser__item userConfirmPassword">
+            <p class="signUser__item__name">パスワード確認<span></span></p>
+            <p class="signUser__item__mess"><input type="password" name="confirmPassword" placeholder="もう一度ご入力下さい"></p>
+        </div>
+        
+        <div class="signUser__item occupation">
+            <p class="signUser__item__name">勤めたい職種<span></span></p>
+            <p class="signUser__item__option">
+                <select name="occupation">
+                    <option value="0"> -- </option>
+                    <option value="1">Webデザイナー</option>
+                    <option value="2">Webエンジニア</option>
+                    <option value="3">Webディレクター</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="signUser__item field">
+            <p class="signUser__item__name">学びたい分野</p>
+            <p class="signUser__item__option">
+                <select name="field">
+                    <option value="0"> -- </option>
+                    <option value="1">UIデザイン</option>
+                    <option value="2">フロントエンド</option>
+                    <option value="3">バックエンド</option>
+                    <option value="4">ウェブ設計・企画</option>
+                </select>
+            </p>
+        </div>
+
+        <button class="signUser__nextBtn">送信</button>
+        <p class="signUser__waittime hidden">少々お待ちください</p>
+    </main>
+
+    <!-- 会社登録 -->
+    <main class="signCompany hidden">
+        <p class="back"><img src="img/ico-back.svg" alt=""></p>
+        <h1 class="signCompany__title">会社登録</h1>
+
+        <div class="signCompany__item companyName">
+            <p class="signCompany__item__name">会社名<span></span></p>
+            <p class="signCompany__item__mess"><input type="text" name="companyName" placeholder="全角16文字 / 半角32文字以内"></p>
+        </div>
+
+        <div class="signCompany__item mailAddress">
+            <p class="signCompany__item__name">メールアドレス<span></span></p>
+            <p class="signCompany__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+        </div>
+
+        <div class="signUser__item userPassword">
+            <p class="signUser__item__name">パスワード<span></span></p>
+            <p class="signUser__item__mess"><input type="password" name="password" placeholder="半角英数16文字以内"></p>
+        </div>
+
+        <div class="signUser__item userConfirmPassword">
+            <p class="signUser__item__name">パスワード確認<span></span></p>
+            <p class="signUser__item__mess"><input type="password" name="confirmPassword" placeholder="もう一度ご入力下さい"></p>
+        </div>
+
+        <div class="signCompany__item referencePoint">
+            <p class="signCompany__item__name">基準ポイント<span></span></p>
+            <p class="signCompany__item__pointArea"><input type="text" name="mailAddress" placeholder="*上限3000">P</p>
+            <button class="signCompany__item__referenceBook">ポイント参考</button>
+        </div>
+
+        <button class="signCompany__nextBtn">つづき</button>
+
+        <div class="signCompany__item catch hidden">
+            <p class="signCompany__item__name">キャッチコピー<span></span></p>
+            <p class="signCompany__item__messArea"><textarea name="catch" placeholder="全角32文字 / 半角64文字以内"></textarea></p>
+            <p class="signCompany__item__commend">* 一覧に載せる情報なので、簡潔な一言のほうが推奨</p>
+        </div>
+
+        <div class="signCompany__item image hidden">
+            <p class="signCompany__item__name">画像選択<span></span></p>
+            <div class="signCompany__item__image">
+                <label for="file_up" class="thumbView">
+                    <img src="" alt="">
+                    <button class="addImage" type="button">＋</button>
+                </label>
+                <input id="file_up" type="file" name="file">
+            </div>
+            <p class="signCompany__item__commend">* 6M以内・幅600px/高300px以上</p>
+        </div>
+
+        <div class="signCompany__item companyDesc hidden">
+            <p class="signCompany__item__name">会社説明<span></span></p>
+            <p class="signCompany__item__messArea"><textarea name="companyDesc" placeholder="全角300文字 / 半角600文字以内"></textarea>
+        </div>
+
+        <button class="signCompany__sendBtn hidden">送信</button>
+        <p class="signCompany__waittime hidden">少々お待ちください</p>
+    </main>
+
+    <section class="referenceBook hidden">
+        <p class="referenceBook__point"><img src="img/graph-point.svg" alt=""></p>
+        <button class="referenceBook__closeBtn">閉じる</button>
+    </section>
+
+    <!-- 着替え画面 -->
+    <main class="dressup hidden">
+        <h1 class="dressup__title">着せ替え</h1>
+        <section class="dressup__avatar">
+            <ul class="dressup__avatar__choose"> 
+                <li>
+                    <p class="itemName">hair</p>
+                    <p class="parts head"></p>
+                </li>
+                <li>
+                    <p class="itemName">suit</p>
+                    <p class="parts body"></p>
+                </li>
+            </ul>
+            <p class="dressup__avatar__dresson">
+                <img class="accessory headband hidden" src="img/parts/illu-accessory-01.svg" alt="headband">
+                <img class="accessory glass hidden" src="img/parts/illu-accessory-02.svg" alt="glass">
+                <img class="accessory blackhat hidden" src="img/parts/illu-accessory-04.svg" alt="blackhat">
+                <img class="accessory devil hidden" src="img/parts/illu-accessory-05.svg" alt="devil">
+                <img class="accessory rabit hidden" src="img/parts/illu-accessory-06.svg" alt="rabit">
+                <img class="accessory ribbon hidden" src="img/parts/illu-accessory-03.svg" alt="ribbon">
+                <img class="head" src="img/avatarHead.svg" alt="head">
+                <img class="body" src="img/avatarBody.svg" alt="body">
+            </p>
+            <ul class="dressup__avatar__choose"> 
+                <li>
+                    <p class="itemName">accessory1</p>
+                    <p class="parts accessory"></p>
+                </li>
+                <li>
+                    <p class="itemName">accessory2</p>
+                    <p class="parts accessory"></p>
+                </li>
+            </ul>
+        </section>
+        <section class="dressup__control">
+            <table class="dressup__control__list">
+                <tr>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="accessory" src="img/parts/illu-accessory-01.svg" alt="headband">
+                        <p class="needPoint"><span>10</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="head" src="img/parts/illu-hairstyle-01.svg" alt="head">
+                        <p class="needPoint"><span>20</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="body" src="img/parts/illu-suit-01.svg" alt="body">
+                        <p class="needPoint"><span>50</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="accessory" src="img/parts/illu-accessory-02.svg" alt="glass">
+                        <p class="needPoint"><span>100</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="head" src="img/parts/illu-hairstyle-02.svg" alt="head">
+                        <p class="needPoint"><span>150</span>p</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="body" src="img/parts/illu-suit-02.svg" alt="body">
+                        <p class="needPoint"><span>200</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="accessory" src="img/parts/illu-accessory-03.svg" alt="ribbon">
+                        <p class="needPoint"><span>300</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="head" src="img/parts/illu-hairstyle-03.svg" alt="head">
+                        <p class="needPoint"><span>500</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="body" src="img/parts/illu-suit-03.svg" alt="body">
+                        <p class="needPoint"><span>800</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="accessory" src="img/parts/illu-accessory-04.svg" alt="blackhat">
+                        <p class="needPoint"><span>1200</span>p</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="head" src="img/parts/illu-hairstyle-04.svg" alt="head">
+                        <p class="needPoint"><span>1600</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="body" src="img/parts/illu-suit-04.svg" alt="body">
+                        <p class="needPoint"><span>2000</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="accessory" src="img/parts/illu-accessory-05.svg" alt="devil">
+                        <p class="needPoint"><span>2400</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="head" src="img/parts/illu-hairstyle-05.svg" alt="head">
+                        <p class="needPoint"><span>2800</span>p</p>
+                    </td>
+                    <td class="nopointer">
+                        <p class="key">
+                            <img src="img/ico-key.svg" alt="キー">
+                        </p>
+                        <img class="accessory" src="img/parts/illu-accessory-06.svg" alt="rabit">
+                        <p class="needPoint"><span>3000</span>p</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <div class="dressup__btn">
+            <button class="yes">完了</button>
+            <button class="no">キャンセル</button>
+        </div>
+        <div class="dressup__check hidden">
+            <p class="dressup__check__word">着せ替えを完了しますか</p>
+            <button class="yes">はい</button>
+            <button class="no">いいえ</button>
+        </div>
+    </main>
+
+    <!-- メニュー部分 -->
+    <footer class="menu hidden">
+        <ul class="menu__list">
+            <li class="menu__list__item">
+                <p class="icon">
+                    <svg width="36.707" height="29.553" viewBox="0 0 36.707 29.553"><path d="M17.6,29.553,0,24.567V0L17.6,5.185Z" fill="#fff"></path><path d="M17.6,29.553,0,24.567V0L17.6,5.185Z" fill="#fff"></path><path d="M148.91,29.553l17.6-4.985V0l-17.6,5.185Z" transform="translate(-129.802)" fill="#fff"></path></svg>
+                </p>
+                <p class="name">word</p>
+            </li>
+            <li class="menu__list__item visited">
+                <p class="icon">
+                    <svg width="36.646" height="32.409" viewBox="0 0 42.646 34.409"><path d="M38.825,0h-35C1.72,0,0,2.141,0,4.758V21.51c0,2.617,1.72,4.758,3.822,4.758H30l6.1,8.141-.839-8.141h3.556c2.1,0,3.822-2.141,3.822-4.758V4.758C42.646,2.141,40.927,0,38.825,0" transform="translate(0 0)" fill="#fff"></path></svg>
+                </p>
+                <p class="name">simulation</p>
+            </li>
+            <li class="menu__list__item">
+                <p class="icon">
+                    <svg width="43" height="30" viewBox="0 0 255.33 154.95"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M626.29,537.27s-6-31.24-11.67-53.82S602.77,449,590.91,437.16s-37.25-14.3-37.25-14.3-90.33-.76-109.9,0S400.1,439.42,393,454.09,372,531.73,372,531.73a41.23,41.23,0,0,0,2.13,23.6c5.8,14,23,24.84,41.4,21.55s30.11-25.69,36.13-35.85S472,531.25,472,531.25h53.44c16.18,0,18.06,6,18.06,6s10.54,16.18,16.19,24.46,21.45,20.7,45.91,12.42S626.29,537.27,626.29,537.27ZM466.06,490.13H444.89V511.3H427.67V490.13H406.5V472.91h21.17V451.74h17.22v21.17h21.17Zm92.68-42.41A11.27,11.27,0,1,1,547.47,459,11.27,11.27,0,0,1,558.74,447.72ZM536.2,492.79a11.27,11.27,0,1,1,11.27-11.27A11.26,11.26,0,0,1,536.2,492.79Zm22.54,22.53A11.27,11.27,0,1,1,570,504.06,11.26,11.26,0,0,1,558.74,515.32Zm22.53-22.53a11.27,11.27,0,1,1,11.27-11.27A11.27,11.27,0,0,1,581.27,492.79Z" transform="translate(-371.17 -422.52)"></path></svg>
+                </p>
+                <p class="name">game</p>
+            </li>
+            <li class="menu__list__item">
+                <p class="icon">
+                    <svg width="9.998" height="36.407" viewBox="0 0 9.998 36.407"><path d="M9.992,31.067a2.833,2.833,0,0,0-.1-.807L7.089,8.329h.732c.456,0,.828-.191.828-.425L9.793.425C9.793.191,9.42,0,8.964,0H.828C.372,0,0,.191,0,.425L1.053,7.9c0,.234.372.425.828.425h.97L.154,30.919H.205A2.812,2.812,0,0,0,.9,32.886L3.39,35.632a2.256,2.256,0,0,0,3.4,0l2.491-2.746a2.74,2.74,0,0,0,.681-1.656H10Z" fill="#fff"></path></svg>
+                </p>
+                <p class="name">matching</p>
+            </li>
+            <li class="menu__list__item">
+                <p class="icon">
+                    <svg width="30" height="35" viewBox="0 0 32.383 37.858"><path d="M29.8,8.832A8.831,8.831,0,1,1,20.964,0,8.832,8.832,0,0,1,29.8,8.832" transform="translate(-4.773 0)" fill="#fff"></path><path d="M0,48.727c0-11.652,7.249-21.1,16.191-21.1s16.192,9.446,16.192,21.1" transform="translate(0 -10.869)" fill="#fff"></path></svg>
+                </p>           
+                <p class="name">mypage</p>
+            </li>
+        </ul>
+    </footer>
+
+    <section class="authent hidden">
+        <h2 class="authent__ttl"><span></span> さま、<br>メールを送信しました。</h2>
+        <p class="authent__comment">迷惑メールになる可能性があるので、ご確認ください！</p>
+
+        <p class="authent__text">メールにある認証番号をご記入ください。</p>
+        <p class="authent__num"><input type="password" placeholder="6桁番号"></p>
+        <button class="authent__entryBtn">登録</button>
+
+        <p class="authent__notice">*メールの受け取りができなかった場合、この画面を閉じてもう一度「つづき」ボタンを押してください。</p>
+        <button class="authent__closeBtn">閉じる</button>
+    </section>
+
+    <!-- <section class="howtouse hidden">
+        <h2 class="howtouse__ttl"><span></span> さん、<br>ご登録ありがとうございます。</h2>
+        <div class="howtouse__content">
+
+        </div>
+        <button class="howtouse__entryBtn">さっそく使おう！</button>
+    </section> -->
+
+    <section class="howtouse hidden">
+        <div class="howtouse__content">
+            <ul class="howtouse__content__slide">
+                <li>
+                    <p><img src="img/illu-howtouse1.svg" alt=""></p>
+                    <p class="sttl">galeaとは？</p>
+                    <p class="content">ビジネス英語を学ぶことが<br>できるWebアプリの誕生</p>
+                </li>
+                <li>
+                    <p><img src="img/illu-howtouse2.svg" alt=""></p>
+                    <p class="sttl">短時間で習得</p>
+                    <p class="content">言葉を場面ごとに分けた<br>シュミレーションで学ぶことができ<br>短い時間で英語を<br>ビジネス英語を習得できます</p>
+                </li>
+                <li>
+                    <p><img src="img/illu-howtouse3.svg" alt=""></p>
+                    <p class="sttl">キャリアアップ</p>
+                    <p class="content">短時間で効率よくビジネス英語を学び<br>キャリアアップに繋げましょう</p>
+                </li>
+            </ul>
+            <ul class="howtouse__content__slideCir">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <button class="howtouse__entryBtn">Start</button>
+    </section>
+
+    <section class="notmatch hidden">
+        <h2 class="notmatch__ttl">認証番号と一致しません。</h2>
+        <p class="notmatch__text">お手数ですが、<br>もう一度ご送信ください。</p>
+        <button class="notmatch__entryBtn">OK</button>
+    </section>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="js/jquery-touch.js"></script> -->
+    <script src="js/login.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/random_word.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/page_change.js"></script>
+    <script src="js/sigin_check.js"></script>
+    <script src="js/start.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/dress.js"></script>
+    <script src="js/mypage.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/upload_view.js"></script>
+    <script src="js/sigin_company_check.js"></script>
+    <script src="js/company.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/dress_data.js"></script>
+    <script src="js/word.js"></script>
+    <script src="js/enquiry.js"></script>
+    <script src="js/company_more.js"></script>
+    <script src="js/image_switch.js"></script>
+    <script src="js/user_fix.js"></script>
+    <script src="js/contact_remind.js"></script>
+    <script src="js/new_message.js"></script>
+    <script src="js/new_mess_data.js"></script>
+</body>
+</html>
