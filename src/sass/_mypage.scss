@@ -109,10 +109,64 @@
     }//.messageFix
 }//.mypage
 
+//ユーザーがいいねを押した記録
+.mypage__like{
+    padding: 2rem 5% 5rem;
+    &__ttl{
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.4rem;
+        font-weight: normal;
+    }//.ttl
+    &__list{
+        padding: 0 1.5rem;
+        list-style-type: none;
+        li{
+            display: flex;
+            padding: 1rem 3rem;
+            &:not(:last-child){
+                border-bottom: 1px solid #707070;
+            }
+            .like_choose{
+                color: #FF6767;
+            }//.like_choose
+            .like_none{
+                color: #BBBBBB;
+            }//.like_none
+            .mess{
+                width: 90%;
+                .companyName{
+                    font-size: 1.5rem;
+                }//.companyName
+                .borderline{
+                    font-size: 1.2rem;
+                    color: #C5AF50;
+                }//.borderline
+            }//.mess
+            .like{
+                width: 10%;
+                i{
+                    font-size: 2.4rem;
+                    text-align: center;
+                    line-height: 4rem;
+                    cursor: pointer;
+                }//i
+            }//.like
+        }//li
+    }//.list
+    &__more,&__none{
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        text-align: right;
+    }//.more
+    &__more{
+        cursor: pointer;
+    }
+}//.like
 
 //ユーザーポイント情報
 .mypage__item{
-    padding: 2rem 5% 5rem;
+    padding: 2rem 5% 2rem;
     &__ttl{
         padding-left: 1.5rem;
         margin-bottom: 0.5rem;
@@ -331,43 +385,12 @@
                 height: 100%;
             }//textarea
         }//.messArea
-        &__image{
-            label{
-                position: relative;
-                display: block;
-                margin: 0.5rem 0;
-                width: 24rem;
-                height: 12rem;
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                img{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 10;
-                    width : 100%;
-                    height: 100%;
-                    border: none;
-                    object-fit: cover;
-                }
-                button{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 4rem 10rem;
-                    width: 100%;
-                    height: 100%;
-                    font-size: 4rem;
-                    background: #707070;
-                    color: #fff;
-                    pointer-events: none;
-                }
-            }//label
-            input{
-                display: none;
-            }//input
-        }//.image
+        .sosmall{
+            width: 5rem;
+        }//.sosmall
+        .small{
+            width: 15rem;
+        }//.small
     }//.itme
     .companyDesc{
         .mypageCompany__messageFix__item__messArea{

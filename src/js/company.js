@@ -7,7 +7,7 @@ $(()=>{
     let _like_btn = $(".matching__content__officeArea__office__like .fa-heart");
 
     let like_send = (name)=>{
-        let now_user = $(".mypage__content__user__message .name").text();
+        let now_user = $(".loginSuccess__jaTtl span").text();
         let send_data = {switch:"like",company:name,user:now_user};
         $.ajax({
             method: "POST",
@@ -147,7 +147,7 @@ $(()=>{
 
     let company_send = (word)=>{
         $(".matching__officeDesc").addClass("hidden");
-        let now_user = $(".mypage__content__user__message .name").text();
+        let now_user = $(".loginSuccess__jaTtl span").text();
         $(".matching .load").removeClass("hidden");
         $(".matching__content").addClass("hidden");
         let send_data = {switch:`${word}`,username:now_user};
@@ -203,6 +203,13 @@ $(()=>{
                 });
             };
             like_set(now_user);
+
+            $(".matching__content__more").on("click",()=>{
+                setTimeout(() => {
+                    like_set(now_user);
+                }, 100);
+            });
+
         }).fail((XMLHttpRequest, textStatus, errorThrown)=>{
             console.log(errorThrown);
             if(errorThrown == "timeout"){

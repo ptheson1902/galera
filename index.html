@@ -541,7 +541,7 @@
             <div class="mypageCompany__content__user flex">
                 <p class="mypageCompany__content__user__fix"><img src="img/ico-fix.svg" alt="修正"></p>
                 <div class="mypageCompany__content__user__message">
-                    <p class="name">株式会社ガリア</p>
+                    <p class="name">株式会社ガレア</p>
                     <p class="like">現在いいね数：<span></span></p>
                     <div>
                         <p class="content people"><b>従業員数</b>　<span>未記入</span></p>
@@ -589,63 +589,51 @@
 
         <div class="mypageCompany__messageFix hidden">
             <p class="back"><img src="img/ico-back.svg" alt=""></p>
-            <div class="mypageCompany__messageFix__item userName">
+            <div class="mypageCompany__messageFix__item companyName">
                 <p class="mypageCompany__messageFix__item__name">ユーザーネーム<span></span></p>
                 <p class="mypageCompany__messageFix__item__mess"><input type="text" name="userName" placeholder="全角8文字 / 半角16文字以内"></p>
             </div>
     
             <div class="mypageCompany__messageFix__item mailAddress">
                 <p class="mypageCompany__messageFix__item__name">メールアドレス<span></span></p>
-                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" placeholder="ex：galea@gmail.com"></p>
             </div>
             
             <div class="mypageCompany__messageFix__item referencePoint">
                 <p class="mypageCompany__messageFix__item__name">基準ポイント<span></span></p>
-                <p class="mypageCompany__messageFix__item__pointArea"><input type="text" name="mailAddress" placeholder="*上限3000">P</p>
+                <p class="mypageCompany__messageFix__item__pointArea"><input type="text" placeholder="*上限3000">P</p>
                 <button class="mypageCompany__messageFix__item__referenceBook">ポイント参考</button>
             </div>
 
             <div class="mypageCompany__messageFix__item phone">
                 <p class="mypageCompany__messageFix__item__name">携　帯<span></span></p>
-                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+                <p class="mypageCompany__messageFix__item__mess"><input class="sosmall" type="text" maxlength="3">-<input class="sosmall" type="text" maxlength="4">-<input class="sosmall" type="text" maxlength="4"></p>
             </div>
 
             <div class="mypageCompany__messageFix__item address">
                 <p class="mypageCompany__messageFix__item__name">住　所<span></span></p>
-                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" placeholder="ex：大阪府　北区　1-1-1"></p>
             </div>
 
             <div class="mypageCompany__messageFix__item people">
                 <p class="mypageCompany__messageFix__item__name">従業員数<span></span></p>
-                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" class="small">人</p>
             </div>
 
             <div class="mypageCompany__messageFix__item money">
                 <p class="mypageCompany__messageFix__item__name">資本金<span></span></p>
-                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" class="small">万円</p>
             </div>
 
             <div class="mypageCompany__messageFix__item agent">
                 <p class="mypageCompany__messageFix__item__name">代理人<span></span></p>
-                <p class="mypageCompany__messageFix__item__mess"><input type="text" name="mailAddress" placeholder="ex：galea@gmail.com"></p>
+                <p class="mypageCompany__messageFix__item__mess"><input type="text" class="small" placeholder="ex：田中　ガレア"></p>
             </div>
 
             <div class="mypageCompany__messageFix__item catch">
                 <p class="mypageCompany__messageFix__item__name">キャッチコピー<span></span></p>
                 <p class="mypageCompany__messageFix__item__messArea"><textarea name="catch" placeholder="全角32文字 / 半角64文字以内"></textarea></p>
                 <p class="mypageCompany__messageFix__item__commend">* 一覧に載せる情報なので、簡潔な一言のほうが推奨</p>
-            </div>
-
-            <div class="mypageCompany__messageFix__item image">
-                <p class="mypageCompany__messageFix__item__name">画像選択<span></span></p>
-                <!-- <div class="mypageCompany__messageFix__item__image">
-                    <label for="file_up" class="thumbView">
-                    <img src="" alt="">
-                    <button class="addImage" type="button">＋</button>
-                    </label>
-                    <input id="file_up" type="file" name="file">
-                </div> -->
-                <p class="mypageCompany__messageFix__item__commend">* 6M以内・幅600px/高300px以上</p>
             </div>
     
             <div class="mypageCompany__messageFix__item companyDesc">
@@ -661,6 +649,7 @@
             <p class="logout">ログアウト</p>
         </div>
 
+        <!-- ユーザーの利用記録 -->
         <section class="mypage__item">
             <h2 class="mypage__item__ttl">記録</h2>
             <div>
@@ -672,6 +661,19 @@
                 <p class="point"><span>0</span> P</p>
             </div>
         </section>
+
+        <div class="mypage__like">
+            <h2 class="mypage__like__ttl">いいねした企業</h2>
+            <li class="likeList hidden">
+                <p class="mess"><span class="companyName">株式会社ウェブウェム</span><br><span class="borderline">Borderline1200~</span></p>
+                <p class="like"><i class="fas fa-heart like_none"></i></p>
+            </li>
+            <ul class="mypage__like__list">
+                
+            </ul>
+            <p class="mypage__like__more">さらに表示</p>
+            <p class="mypage__like__none hidden">これ以上データはありません</p>
+        </div>
     </main>
 
     <!-- ユーザー登録 -->
@@ -1002,14 +1004,6 @@
         <button class="authent__closeBtn">閉じる</button>
     </section>
 
-    <!-- <section class="howtouse hidden">
-        <h2 class="howtouse__ttl"><span></span> さん、<br>ご登録ありがとうございます。</h2>
-        <div class="howtouse__content">
-
-        </div>
-        <button class="howtouse__entryBtn">さっそく使おう！</button>
-    </section> -->
-
     <section class="howtouse hidden">
         <div class="howtouse__content">
             <ul class="howtouse__content__slide">
@@ -1070,5 +1064,8 @@
     <script src="js/contact_remind.js"></script>
     <script src="js/new_message.js"></script>
     <script src="js/new_mess_data.js"></script>
+    <script src="js/like_data.js"></script>
+    <script src="js/like_more.js"></script>
+    <script src="js/company_data_update.js"></script>
 </body>
 </html>

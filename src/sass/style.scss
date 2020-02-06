@@ -186,7 +186,6 @@ body{
     }//.list
 }//.menu
 
-
 @keyframes new_list{
     0%{
         opacity: 0;
@@ -304,8 +303,3 @@ body{
 @import "_dressup";
 @import "_word";
 @import "_game";
-
-/* ~ 479px ポートレートモード（スマートフォンの縦向き表示） */
-@media screen and (max-width:479px){
-    
-}

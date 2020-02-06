@@ -4,12 +4,10 @@ $(()=>{
     $(".menu__list__item:nth-of-type(5)").on("click",()=>{
         let mypage_flag;
         $(".mypage .load").removeClass("hidden");
-        if($(".mypage__content").hasClass("hidden")){
-            $(".mypageCompany__content").addClass("hidden");
-            mypage_flag = 1;
-        }else{
-            $(".mypage__content").addClass("hidden");
+        if($(".loginSuccess__reference").hasClass("hidden")){
             mypage_flag = 2;
+        }else{
+            mypage_flag = 1;
         }
         let username = $(".loginSuccess__jaTtl span").text();
         let send_data = {name:username};
@@ -27,17 +25,22 @@ $(()=>{
             $(".mypage__item").removeClass("hidden");
             
             if(mypage_flag == 1){
-                $(".mypageCompany__messageFix").addClass("hidden");
                 $(".mypage__messageFix").addClass("hidden");
+                $(".mypage__content").addClass("hidden");
+                $(".mypageCompany__messageFix").addClass("hidden");
                 $(".mypageCompany__content__contact").addClass("hidden");
                 $(".mypageCompany__content").removeClass("hidden");
                 $(".mypageCompany__content__user").removeClass("hidden");
                 $(".mypageCompany__content__user").addClass("flex");
                 $(".mypageCompany__content__messAdjust").removeClass("hidden");
+                $(".mypage__like").removeClass("hidden");
             }else{
+                $(".mypageCompany__content").addClass("hidden");
+                $(".mypage__messageFix").addClass("hidden");
                 $(".mypage__content").removeClass("hidden");
                 $(".mypage__content__user").removeClass("hidden");
                 $(".mypage__content__user").addClass("flex");
+                $(".mypage__like").removeClass("hidden");
             }
             $(".mypage .load").addClass("hidden");
         }).fail((XMLHttpRequest, textStatus, errorThrown)=>{
@@ -101,16 +104,19 @@ $(()=>{
         _mypage_main.addClass("hidden");
         _mypage_fix.removeClass("hidden");
         _user_item.addClass("hidden");
+        $(".mypage__like").addClass("hidden");
     });
 
     _dress_btn.on("click",()=>{
         $(".mypage").addClass("hidden");
+        $(".mypage__like").addClass("hidden");
         _dressup.removeClass("hidden");
     });
 
     //個人情報修正画面・メインに戻る取り消しボタン
     let _fix_cancel = $(".mypage__messageFix__btn .no");
     _fix_cancel.on("click",()=>{
+        $(".mypage__like").removeClass("hidden");
         _mypage_fix.addClass("hidden");
         _mypage_main.removeClass("hidden");
         _user_item.removeClass("hidden");
@@ -118,6 +124,7 @@ $(()=>{
 
     //個人情報バックボタン
     $(".mypage__messageFix .back").on("click",()=>{
+        $(".mypage__like").removeClass("hidden");
         _mypage_fix.addClass("hidden");
         _mypage_main.removeClass("hidden");
         _user_item.removeClass("hidden");
@@ -140,24 +147,21 @@ $(()=>{
         _company_content.addClass("hidden");
         _user_item.addClass("hidden");
         _message_company_fix.removeClass("hidden");
+        $(".mypage__like").addClass("hidden");
     });
 
     $(".mypageCompany__messageFix .back").on("click",()=>{
         _company_content.removeClass("hidden");
         _user_item.removeClass("hidden");
         _message_company_fix.addClass("hidden");
+        $(".mypage__like").removeClass("hidden");
     });
 
     $(".mypageCompany__messageFix__btn .no").on("click",()=>{
         _company_content.removeClass("hidden");
         _user_item.removeClass("hidden");
         _message_company_fix.addClass("hidden");
-    });
-
-    $(".mypageCompany__messageFix__btn .yes").on("click",()=>{
-        _company_content.removeClass("hidden");
-        _user_item.removeClass("hidden");
-        _message_company_fix.addClass("hidden");
+        $(".mypage__like").removeClass("hidden");
     });
 
     //お問い合わせへ

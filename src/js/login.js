@@ -14,8 +14,8 @@ $(()=>{
         }
 
         let send_login_data={
-            username : login_name,
-            password : login_password,
+            username: login_name,
+            password: login_password,
             state: login_state
         };
 
@@ -90,27 +90,27 @@ $(()=>{
                     $(".mypage__content__user__message .mail").text(data["mail"]);
                     let user_work = ()=>{
                         switch(data["work"]){
-                            case 0:
+                            case "0":
                                 return "未選択";
-                            case 1:
+                            case "1":
                                 return "UIデザイン";
-                            case 2:
+                            case "2":
                                 return "フロントエンド";
-                            case 3:
+                            case "3":
                                 return "バックエンド";    
-                            case 4:
+                            case "4":
                                 return "Web設計・企画";
                         }
                     };
                     let user_job = ()=>{
                         switch(data["job"]){
-                            case 0:
+                            case "0":
                                 return "未選択";
-                            case 1:
+                            case "1":
                                 return "Webデザイナー";
-                            case 2:
+                            case "2":
                                 return "Webエンジニア";
-                            case 3:
+                            case "3":
                                 return "Webディレクター";
                         }
                     };
@@ -210,36 +210,58 @@ $(()=>{
                     $(".mypageCompany__content__user__message .like span").text(data["like"]);
                     $(".mypageCompany__content__user__message .mail span").text(data["mail"]);
 
-                    console.log(data);
+                    //データ修正
+                    $(".mypageCompany__messageFix .referencePoint input").val(data["reference"]);
+                    $(".mypageCompany__messageFix .mailAddress input").val(data["mail"]);
+                    $(".mypageCompany__messageFix .userName input").val(data["username"]);
+                    $(".mypageCompany__messageFix .catch textarea").val(data["catch"]);
+                    $(".mypageCompany__messageFix .companyDesc textarea").val(data["company_desc"]);
+                    
                     let _company_user_message = $(".mypageCompany__content__user__message");
                     if(data["people"]==null){
                         $(".people span",_company_user_message).text("未記入");
                     }else{
-                        $(".people span",_company_user_message).text(data["people"])
+                        $(".people span",_company_user_message).text(data["people"]);
+                        //データ修正
+                        $(".mypageCompany__messageFix .people input").val(data["people"]);
                     }
 
                     if(data["money"]==null){
                         $(".money span",_company_user_message).text("未記入");
                     }else{
-                        $(".money span",_company_user_message).text(data["money"])
+                        $(".money span",_company_user_message).text(data["money"]);
+                        //データ修正
+                        $(".mypageCompany__messageFix .money input").val(data["money"]);
                     }
                     
                     if(data["agent"]==null){
                         $(".agent span",_company_user_message).text("未記入");
                     }else{
-                        $(".agent span",_company_user_message).text(data["agent"])
+                        $(".agent span",_company_user_message).text(data["agent"]);
+                        //データ修正
+                        $(".mypageCompany__messageFix .agent input").val(data["agent"]);
                     }
 
                     if(data["phone"]==null){
                         $(".phone span",_company_user_message).text("未記入");
                     }else{
-                        $(".phone span",_company_user_message).text(data["phone"])
+                        let _phone_a = data["phone"].slice(0,2);
+                        let _phone_b = data["phone"].slice(3,6);
+                        let _phone_c = data["phone"].slice(7,10);
+                        $(".phone span",_company_user_message).text(_phone_a+"-"+_phone_b+"-"+_phone_c);
+                        
+                        //データ修正
+                        $(".mypageCompany__messageFix .phone .sosamll:nth-of-type(1)").val(_phone_a);
+                        $(".mypageCompany__messageFix .phone .sosamll:nth-of-type(2)").val(_phone_b);
+                        $(".mypageCompany__messageFix .phone .sosamll:nth-of-type(3)").val(_phone_c);
                     }
 
                     if(data["address"]==null){
                         $(".address span",_company_user_message).text("未記入");
                     }else{
-                        $(".address span",_company_user_message).text(data["address"])
+                        $(".address span",_company_user_message).text(data["address"]);
+                        //データ修正
+                        $(".mypageCompany__messageFix .address input").val(data["address"]);
                     }
                 }//if
             }//if

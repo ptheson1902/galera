@@ -28,7 +28,7 @@ $(()=>{
             console.log(data);
             let page_view_num = data.length;
             
-            let office_clone = $(".matching__content__officeArea__office:first-child").clone();
+            let office_clone = $(".matching__content>.matching__content__officeArea__office").clone();
             for(let i=1;i<=page_view_num;i++){
                 $(".matching__content__officeArea").append(office_clone.clone());
                 $(`.matching__content__officeArea__office:last-child`).removeClass("hidden");
