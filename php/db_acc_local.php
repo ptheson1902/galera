@@ -1,6 +1,6 @@
 <?php
 
-    define('DB_NAME','syuseika');
+    define('DB_NAME','galera');
     define('DB_HOST','localhost');
     define('CHARSET','utf8');
 
